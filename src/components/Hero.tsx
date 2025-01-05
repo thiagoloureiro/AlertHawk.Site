@@ -36,7 +36,7 @@ export function Hero() {
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a 
-              href="https://alerthawk.net/"
+              href="https://app.alerthawk.net/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-800 transition-colors"
