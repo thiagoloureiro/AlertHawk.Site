@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Linkedin } from 'lucide-react';
+import logoImage from '../assets/logo.png';
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
           <div className="relative z-20">
             <div className="flex items-center space-x-2 mb-4">
               <img 
-                src="/logo.png" 
+                src={logoImage}
                 alt="AlertHawk Logo" 
                 className="w-8 h-8"
               />
