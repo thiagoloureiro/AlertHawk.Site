@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Github } from 'lucide-react';
+import appImage from '../assets/app.png';
 
 export function Hero() {
   return (
@@ -48,7 +49,7 @@ export function Hero() {
         <div className="mt-16 fade-up" style={{ transitionDelay: '200ms' }}>
           <div className="glass-card p-1 rounded-xl">
             <img
-              src="app.png"
+              src={appImage}
               alt="Dashboard Preview"
               className="rounded-lg"
             />
