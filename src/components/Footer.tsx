@@ -1,4 +1,3 @@
-import React from 'react';
 import { Github, Linkedin } from 'lucide-react';
 import logoImage from '../assets/logo.png';
 import googlePlayBadge from '../assets/store-badges/google-play-badge.png';
@@ -45,7 +44,7 @@ export function Footer() {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a 
-                href="https://testflight.apple.com/join/wzf2nzP7"
+                href="https://apps.apple.com/us/app/alerthawk/id6739902511"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-opacity hover:opacity-80"
