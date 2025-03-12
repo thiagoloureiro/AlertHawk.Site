@@ -18,8 +18,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-1 rounded-full bg-gray-800/50 border border-gray-700/50 text-gray-300 hover:text-white transition-colors"
             >
-              <Github className="w-4 h-4 mr-2" />
-              Open Source
+            
             </a>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
