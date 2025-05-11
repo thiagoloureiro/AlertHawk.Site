@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:23-alpine as react-build
+FROM node:23 as react-build
 WORKDIR /app
 COPY . ./
 RUN npm install
@@ -17,9 +17,7 @@ RUN apk update && apk upgrade
 
 USER nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY privacy.html /usr/share/nginx/html
 
 COPY --from=react-build /app/dist /usr/share/nginx/html
-COPY logo.png /usr/share/nginx/html
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
