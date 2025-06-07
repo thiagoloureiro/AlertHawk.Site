@@ -34,7 +34,7 @@ export function Benefits() {
   const ref = useScrollReveal();
 
   return (
-    <section ref={ref} className="py-20 bg-gray-800/50 backdrop-blur-sm relative">
+    <section ref={ref} className="py-20 bg-gray-800/50 backdrop-blur-xs relative">
       <div className="background-glow opacity-50" />
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white fade-up">
@@ -49,7 +49,7 @@ export function Benefits() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <benefit.icon className="w-6 h-6 text-purple-700" />
                 </div>
                 <div>

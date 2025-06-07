@@ -1,6 +1,83 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility container {
+  @apply max-w-7xl mx-auto;
+}
+
+@utility glass-card {
+  @apply bg-gray-800/50 backdrop-blur-lg border border-gray-700/50 relative z-10;
+}
+
+@utility btn-purple {
+  @apply inline-flex items-center bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-800 transition-colors;
+}
+
+@utility fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility visible {
+  &.fade-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility background-grid {
+  @apply absolute inset-0 z-0;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 80%);
+}
+
+@utility background-glow {
+  @apply absolute inset-0 z-0;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(111, 76, 255, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 0% 50%,
+      rgba(111, 76, 255, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      rgba(111, 76, 255, 0.12),
+      transparent 40%
+    );
+}
 
 @layer base {
   html {
@@ -12,47 +89,5 @@
     background-image: 
       radial-gradient(circle at 25% 15%, rgba(111, 76, 255, 0.04) 0%, transparent 40%),
       radial-gradient(circle at 75% 85%, rgba(111, 76, 255, 0.04) 0%, transparent 40%);
-  }
-}
-
-@layer components {
-  .container {
-    @apply max-w-7xl mx-auto;
-  }
-  
-  .glass-card {
-    @apply bg-gray-800/50 backdrop-blur-lg border border-gray-700/50 relative z-10;
-  }
-  
-  .btn-purple {
-    @apply inline-flex items-center bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-800 transition-colors;
-  }
-  
-  .fade-up {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .background-grid {
-    @apply absolute inset-0 z-0;
-    background-size: 50px 50px;
-    background-image: 
-      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    mask-image: radial-gradient(ellipse at center, black 0%, transparent 80%);
-  }
-  
-  .background-glow {
-    @apply absolute inset-0 z-0;
-    background: 
-      radial-gradient(circle at 50% 0%, rgba(111, 76, 255, 0.12), transparent 40%),
-      radial-gradient(circle at 0% 50%, rgba(111, 76, 255, 0.12), transparent 40%),
-      radial-gradient(circle at 100% 50%, rgba(111, 76, 255, 0.12), transparent 40%);
   }
 }
