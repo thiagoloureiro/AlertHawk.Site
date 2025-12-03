@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
 import { Benefits } from './components/Benefits';
+import { KubernetesMonitoring } from './components/KubernetesMonitoring';
 import { DeploymentInfo } from './components/DeploymentInfo';
 import { Footer } from './components/Footer';
 
@@ -14,6 +15,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <KubernetesMonitoring />
         <Features />
         <Benefits />
         <DeploymentInfo />

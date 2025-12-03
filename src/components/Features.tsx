@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, Database, Cloud, Smartphone, Layers } from 'lucide-react';
+import { LayoutDashboard, Database, Cloud, Smartphone, Layers, Server } from 'lucide-react';
 
 const features = [
   {
@@ -26,6 +26,11 @@ const features = [
     icon: Layers,
     title: 'Microservices Architecture',
     description: 'Built to handle modern, distributed systems with complex architectures.'
+  },
+  {
+    icon: Server,
+    title: 'Kubernetes Metrics',
+    description: 'Monitor cluster, pod, and namespace metrics including CPU and RAM usage across your Kubernetes infrastructure.'
   }
 ];
 
