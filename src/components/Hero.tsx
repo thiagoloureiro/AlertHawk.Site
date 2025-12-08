@@ -4,8 +4,10 @@ import appImage from '../assets/app.png';
 import mobile1 from '../assets/mobile1.png';
 import mobile2 from '../assets/mobile2.png';
 import mobile3 from '../assets/mobile3.png';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function Hero() {
+  const { t } = useLanguage();
   return (
     <section className="pt-32 pb-20 relative">
       <div className="background-glow opacity-75" />
@@ -22,10 +24,10 @@ export function Hero() {
             </a>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Enterprise-Grade Monitoring for Kubernetes & Infrastructure
+            {t('hero.title')}
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Real-time Kubernetes metrics, uptime monitoring, intelligent alerting, and instant notifications. Built for DevOps teams who need comprehensive visibility into their infrastructure.
+            {t('hero.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -35,7 +37,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-800 transition-colors"
             >
-              View Helm Chart
+              {t('hero.viewHelmChart')}
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a 
@@ -44,7 +46,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-800 transition-colors"
             >
-              Go to AlertHawk
+              {t('hero.goToAlertHawk')}
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
           </div>

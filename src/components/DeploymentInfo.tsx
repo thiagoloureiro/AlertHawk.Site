@@ -1,34 +1,36 @@
 import React from 'react';
 import { Github, Container, ArrowRight, Code, Database, Network, Shield } from 'lucide-react';
-
-const technologies = [
-  {
-    icon: Container,
-    title: 'Kubernetes Native',
-    description: 'Built for Kubernetes with Helm chart deployment. Native integration with Kubernetes API for seamless cluster monitoring.',
-    iconClass: 'text-blue-500'
-  },
-  {
-    icon: Database,
-    title: 'Time-Series Database',
-    description: 'Efficient storage and querying of metrics data with optimized time-series database architecture for historical analysis.',
-    iconClass: 'text-purple-500'
-  },
-  {
-    icon: Network,
-    title: 'Real-time Processing',
-    description: 'Low-latency metric collection and processing engine for real-time monitoring and instant alert triggering.',
-    iconClass: 'text-green-500'
-  },
-  {
-    icon: Shield,
-    title: 'Secure & Scalable',
-    description: 'Enterprise-grade security with RBAC, encrypted communications, and horizontal scaling capabilities.',
-    iconClass: 'text-yellow-500'
-  }
-];
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function DeploymentInfo() {
+  const { t } = useLanguage();
+
+  const technologies = [
+    {
+      icon: Container,
+      title: t('technology.kubernetes.title'),
+      description: t('technology.kubernetes.description'),
+      iconClass: 'text-blue-500'
+    },
+    {
+      icon: Database,
+      title: t('technology.database.title'),
+      description: t('technology.database.description'),
+      iconClass: 'text-purple-500'
+    },
+    {
+      icon: Network,
+      title: t('technology.processing.title'),
+      description: t('technology.processing.description'),
+      iconClass: 'text-green-500'
+    },
+    {
+      icon: Shield,
+      title: t('technology.security.title'),
+      description: t('technology.security.description'),
+      iconClass: 'text-yellow-500'
+    }
+  ];
   return (
     <section className="py-20 bg-gray-800/50 relative">
       <div className="background-glow opacity-50" />
@@ -38,10 +40,10 @@ export function DeploymentInfo() {
             <Code className="w-8 h-8 text-purple-500" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Built with Modern Technology
+            {t('technology.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Leveraging cutting-edge technologies for reliable, scalable, and performant infrastructure monitoring
+            {t('technology.subtitle')}
           </p>
         </div>
 
@@ -64,10 +66,9 @@ export function DeploymentInfo() {
             <div className="flex items-start space-x-4">
               <Container className="w-8 h-8 text-blue-500 shrink-0" />
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Kubernetes Deployment</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">{t('technology.deployment.title')}</h3>
                 <p className="text-gray-300 mb-4">
-                  Deploy AlertHawk on your Kubernetes cluster with our official Helm chart. 
-                  Supports all major Kubernetes distributions and cloud providers.
+                  {t('technology.deployment.description')}
                 </p>
                 <a 
                   href="https://artifacthub.io/packages/helm/alerthawk/alerthawk" 
@@ -75,7 +76,7 @@ export function DeploymentInfo() {
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center"
                 >
-                  View Helm Chart
+                  {t('technology.deployment.viewHelmChart')}
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </a>
               </div>
@@ -86,10 +87,9 @@ export function DeploymentInfo() {
             <div className="flex items-start space-x-4">
               <Github className="w-8 h-8 text-purple-500 shrink-0" />
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Open Source</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">{t('technology.openSource.title')}</h3>
                 <p className="text-gray-300 mb-4">
-                  Built with transparency in mind. View the source code, contribute, 
-                  and customize AlertHawk to fit your specific monitoring needs.
+                  {t('technology.openSource.description')}
                 </p>
                 <a 
                   href="https://github.com/thiagoloureiro/AlertHawk" 
@@ -97,7 +97,7 @@ export function DeploymentInfo() {
                   rel="noopener noreferrer"
                   className="text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center"
                 >
-                  View on GitHub
+                  {t('technology.openSource.viewGitHub')}
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </a>
               </div>

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import logoImage from '../assets/logo.png';
+import { LanguageSelector } from './LanguageSelector';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -14,9 +17,9 @@ export function Header() {
   };
 
   const navLinks = [
-    { id: 'home', label: 'Home' },
-    { id: 'pricing', label: 'Pricing' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: t('nav.home') },
+    { id: 'pricing', label: t('nav.pricing') },
+    { id: 'contact', label: t('nav.contact') },
   ];
 
   return (
@@ -59,21 +62,23 @@ export function Header() {
             </div>
           </div>
 
-          {/* Mobile Menu Button - Right */}
-          <button
-            className="md:hidden text-gray-300 hover:text-white transition-colors z-10"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
-          
-          {/* Spacer for mobile to balance layout */}
-          <div className="md:hidden w-10 h-10"></div>
+          {/* Right side - Language Selector and Mobile Menu */}
+          <div className="flex items-center space-x-4 z-10">
+            <LanguageSelector />
+            
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-gray-300 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
       </nav>
 

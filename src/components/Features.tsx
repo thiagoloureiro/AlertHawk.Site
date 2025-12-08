@@ -1,55 +1,58 @@
 import React from 'react';
 import { Cpu, Activity, Bell, Globe, Zap, BarChart3, AlertTriangle, Smartphone, Server } from 'lucide-react';
-
-const features = [
-  {
-    icon: Cpu,
-    title: 'Kubernetes CPU & RAM Metrics',
-    description: 'Real-time monitoring of CPU and memory usage across clusters, nodes, pods, and namespaces. Track resource consumption with detailed analytics and historical data.'
-  },
-  {
-    icon: Activity,
-    title: 'Uptime Monitoring',
-    description: 'Continuous uptime monitoring for websites, APIs, and services. Get instant alerts when downtime is detected with response time tracking and availability metrics.'
-  },
-  {
-    icon: Bell,
-    title: 'Intelligent Alerting',
-    description: 'Multi-channel alerting system with configurable thresholds. Receive notifications via email, SMS, Slack, Discord, and webhooks when issues are detected.'
-  },
-  {
-    icon: Zap,
-    title: 'Real-time Notifications',
-    description: 'Instant push notifications to mobile apps and web browsers. Never miss a critical alert with real-time updates on your infrastructure status.'
-  },
-  {
-    icon: BarChart3,
-    title: 'Advanced Metrics & Analytics',
-    description: 'Comprehensive metrics dashboard with customizable charts, historical data analysis, and performance trends. Monitor everything from cluster health to application performance.'
-  },
-  {
-    icon: Server,
-    title: 'Kubernetes Cluster Monitoring',
-    description: 'Full visibility into your Kubernetes infrastructure. Monitor cluster-wide metrics, node health, pod status, namespace resource usage, and container-level performance.'
-  },
-  {
-    icon: Globe,
-    title: 'Multi-endpoint Monitoring',
-    description: 'Monitor websites, REST APIs, GraphQL endpoints, and TCP/UDP services. Track response times, status codes, and availability from multiple geographic locations.'
-  },
-  {
-    icon: AlertTriangle,
-    title: 'Proactive Issue Detection',
-    description: 'Advanced anomaly detection and threshold-based alerting. Identify performance degradation before it becomes a critical issue with predictive monitoring.'
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile & Web Access',
-    description: 'Native iOS and Android apps plus responsive web dashboard. Monitor your infrastructure from anywhere with real-time updates and push notifications.'
-  }
-];
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function Features() {
+  const { t } = useLanguage();
+
+  const features = [
+    {
+      icon: Cpu,
+      title: t('features.items.kubernetesMetrics.title'),
+      description: t('features.items.kubernetesMetrics.description')
+    },
+    {
+      icon: Activity,
+      title: t('features.items.uptime.title'),
+      description: t('features.items.uptime.description')
+    },
+    {
+      icon: Bell,
+      title: t('features.items.alerting.title'),
+      description: t('features.items.alerting.description')
+    },
+    {
+      icon: Zap,
+      title: t('features.items.notifications.title'),
+      description: t('features.items.notifications.description')
+    },
+    {
+      icon: BarChart3,
+      title: t('features.items.analytics.title'),
+      description: t('features.items.analytics.description')
+    },
+    {
+      icon: Server,
+      title: t('features.items.clusterMonitoring.title'),
+      description: t('features.items.clusterMonitoring.description')
+    },
+    {
+      icon: Globe,
+      title: t('features.items.multiEndpoint.title'),
+      description: t('features.items.multiEndpoint.description')
+    },
+    {
+      icon: AlertTriangle,
+      title: t('features.items.issueDetection.title'),
+      description: t('features.items.issueDetection.description')
+    },
+    {
+      icon: Smartphone,
+      title: t('features.items.mobileAccess.title'),
+      description: t('features.items.mobileAccess.description')
+    }
+  ];
+
   return (
     <section id="features" className="py-20 bg-gray-900 relative">
       <div className="background-glow opacity-50" />
@@ -59,10 +62,10 @@ export function Features() {
             <Zap className="w-8 h-8 text-blue-500" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Enterprise Monitoring Features
+            {t('features.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive monitoring capabilities designed for modern infrastructure and Kubernetes environments
+            {t('features.subtitle')}
           </p>
         </div>
         

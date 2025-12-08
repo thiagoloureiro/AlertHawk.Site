@@ -1,42 +1,44 @@
 import React from 'react';
 import { Server, Activity, Bell, Scale, Smartphone, Zap, Shield, BarChart3 } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-
-const benefits = [
-  {
-    icon: Activity,
-    title: 'Real-time Infrastructure Monitoring',
-    description: 'Monitor Kubernetes clusters, applications, and endpoints with sub-second latency. Get instant visibility into CPU, RAM, and system health metrics.'
-  },
-  {
-    icon: Bell,
-    title: 'Multi-Channel Alerting',
-    description: 'Configure alerts via email, SMS, Slack, Discord, webhooks, and push notifications. Never miss a critical issue with intelligent alert routing.'
-  },
-  {
-    icon: BarChart3,
-    title: 'Advanced Analytics & Metrics',
-    description: 'Historical data analysis, trend detection, and performance insights. Track resource utilization patterns and optimize your infrastructure.'
-  },
-  {
-    icon: Server,
-    title: 'Self-Hosted & Private',
-    description: 'Deploy on your own infrastructure with full data control. No vendor lock-in, complete privacy, and compliance with your security requirements.'
-  },
-  {
-    icon: Scale,
-    title: 'Enterprise Scalability',
-    description: 'Built to handle thousands of metrics and endpoints. Horizontally scalable architecture that grows with your infrastructure needs.'
-  },
-  {
-    icon: Zap,
-    title: 'Low-Latency Notifications',
-    description: 'Instant push notifications to mobile and web. Get alerted within seconds of an issue detection with real-time status updates.'
-  }
-];
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function Benefits() {
   const ref = useScrollReveal();
+  const { t } = useLanguage();
+
+  const benefits = [
+    {
+      icon: Activity,
+      title: t('benefits.items.monitoring.title'),
+      description: t('benefits.items.monitoring.description')
+    },
+    {
+      icon: Bell,
+      title: t('benefits.items.alerting.title'),
+      description: t('benefits.items.alerting.description')
+    },
+    {
+      icon: BarChart3,
+      title: t('benefits.items.analytics.title'),
+      description: t('benefits.items.analytics.description')
+    },
+    {
+      icon: Server,
+      title: t('benefits.items.selfHosted.title'),
+      description: t('benefits.items.selfHosted.description')
+    },
+    {
+      icon: Scale,
+      title: t('benefits.items.scalability.title'),
+      description: t('benefits.items.scalability.description')
+    },
+    {
+      icon: Zap,
+      title: t('benefits.items.notifications.title'),
+      description: t('benefits.items.notifications.description')
+    }
+  ];
 
   return (
     <section ref={ref} className="py-20 bg-gray-800/50 backdrop-blur-xs relative">
@@ -47,10 +49,10 @@ export function Benefits() {
             <Zap className="w-8 h-8 text-green-500" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Why Choose AlertHawk?
+            {t('benefits.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Enterprise-grade monitoring solution designed for DevOps teams and infrastructure engineers
+            {t('benefits.subtitle')}
           </p>
         </div>
         

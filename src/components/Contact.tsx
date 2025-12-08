@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Mail, Github, MessageCircle, Globe, Send, CheckCircle } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function Contact() {
   const ref = useScrollReveal();
+  const { t } = useLanguage();
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -45,10 +47,10 @@ export function Contact() {
             <MessageCircle className="w-8 h-8 text-blue-500" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Get in Touch
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Have questions, need support, or want to contribute? We'd love to hear from you.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -69,13 +71,13 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-blue-400 transition-colors">
-                    GitHub
+                    {t('contact.github.title')}
                   </h3>
                   <p className="text-gray-300 mb-3">
-                    View the source code, report issues, or contribute to the project.
+                    {t('contact.github.description')}
                   </p>
                   <span className="text-blue-400 text-sm font-medium inline-flex items-center">
-                    Visit GitHub
+                    {t('contact.github.visit')}
                     <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                   </span>
                 </div>
@@ -97,13 +99,13 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-purple-400 transition-colors">
-                    Live Demo
+                    {t('contact.demo.title')}
                   </h3>
                   <p className="text-gray-300 mb-3">
-                    Try AlertHawk in action. Explore the dashboard and see all features.
+                    {t('contact.demo.description')}
                   </p>
                   <span className="text-purple-400 text-sm font-medium inline-flex items-center">
-                    View Demo
+                    {t('contact.demo.view')}
                     <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                   </span>
                 </div>
@@ -118,10 +120,10 @@ export function Contact() {
                   <Mail className="w-6 h-6 text-purple-500" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-2 text-white">
-                  Contact Us for Pricing
+                  {t('contact.form.title')}
                 </h3>
                 <p className="text-gray-400">
-                  For SaaS pricing, support, and inquiries
+                  {t('contact.form.subtitle')}
                 </p>
               </div>
 
@@ -130,16 +132,16 @@ export function Contact() {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-700/20 mb-4">
                     <CheckCircle className="w-8 h-8 text-green-500" />
                   </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Message Sent!</h4>
+                  <h4 className="text-xl font-semibold text-white mb-2">{t('contact.form.success.title')}</h4>
                   <p className="text-gray-300">
-                    We'll get back to you as soon as possible.
+                    {t('contact.form.success.description')}
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Your Email
+                      {t('contact.form.email')}
                     </label>
                     <input
                       type="email"
@@ -147,13 +149,13 @@ export function Contact() {
                       name="email"
                       required
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                      placeholder="your.email@example.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Your Message
+                      {t('contact.form.message')}
                     </label>
                     <textarea
                       id="message"
@@ -161,14 +163,14 @@ export function Contact() {
                       required
                       rows={5}
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
-                      placeholder="Tell us about your needs, questions, or how we can help..."
+                      placeholder={t('contact.form.messagePlaceholder')}
                     />
                   </div>
 
                   {status === 'error' && (
                     <div className="p-3 bg-red-900/20 border border-red-700/50 rounded-lg">
                       <p className="text-red-400 text-sm">
-                        Something went wrong. Please try again or email us directly at alerthawk@alerthawk.net
+                        {t('contact.form.error')}
                       </p>
                     </div>
                   )}
@@ -181,12 +183,12 @@ export function Contact() {
                     {status === 'submitting' ? (
                       <>
                         <span className="animate-spin mr-2">⏳</span>
-                        Sending...
+                        {t('contact.form.sending')}
                       </>
                     ) : (
                       <>
                         <Send className="w-5 h-5 mr-2" />
-                        Send Message
+                        {t('contact.form.send')}
                       </>
                     )}
                   </button>
