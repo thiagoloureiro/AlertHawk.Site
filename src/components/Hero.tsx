@@ -22,10 +22,10 @@ export function Hero() {
             </a>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Monitor Your Applications/APIs and Hosts with Confidence
+            Enterprise-Grade Monitoring for Kubernetes & Infrastructure
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Get real-time insights into your entire stack with powerful monitoring tools designed for modern applications.
+            Real-time Kubernetes metrics, uptime monitoring, intelligent alerting, and instant notifications. Built for DevOps teams who need comprehensive visibility into their infrastructure.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">

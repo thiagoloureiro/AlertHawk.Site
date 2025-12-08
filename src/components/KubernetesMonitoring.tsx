@@ -20,10 +20,10 @@ export function KubernetesMonitoring() {
               <Server className="w-8 h-8 text-purple-500" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Kubernetes Monitoring
+              Kubernetes Infrastructure Monitoring
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Monitor your Kubernetes clusters, pods, and namespaces with comprehensive metrics for CPU, RAM, and resource utilization.
+              Deep visibility into your Kubernetes infrastructure with real-time CPU and RAM metrics, cluster health monitoring, and resource utilization tracking across nodes, pods, and namespaces.
             </p>
           </div>
 
@@ -31,23 +31,23 @@ export function KubernetesMonitoring() {
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             <div className="glass-card p-6 rounded-xl hover:border-purple-500/50 transition-all duration-300 fade-up">
               <Cpu className="w-8 h-8 text-purple-500 mb-4" />
-              <h3 className="text-lg font-semibold mb-2 text-white">Cluster Metrics</h3>
+              <h3 className="text-lg font-semibold mb-2 text-white">Cluster-Level Metrics</h3>
               <p className="text-gray-300 text-sm">
-                Monitor node CPU and memory usage across your entire cluster with real-time insights.
+                Real-time CPU and memory monitoring across all nodes in your cluster. Track resource allocation, utilization trends, and capacity planning metrics.
               </p>
             </div>
             <div className="glass-card p-6 rounded-xl hover:border-purple-500/50 transition-all duration-300 fade-up" style={{ transitionDelay: '100ms' }}>
               <HardDrive className="w-8 h-8 text-purple-500 mb-4" />
-              <h3 className="text-lg font-semibold mb-2 text-white">Application Metrics</h3>
+              <h3 className="text-lg font-semibold mb-2 text-white">Pod & Container Metrics</h3>
               <p className="text-gray-300 text-sm">
-                Track pod and container CPU and memory usage across namespaces with detailed analytics.
+                Granular CPU and RAM tracking at the pod and container level. Monitor resource consumption per namespace with detailed breakdowns and historical data.
               </p>
             </div>
             <div className="glass-card p-6 rounded-xl hover:border-purple-500/50 transition-all duration-300 fade-up" style={{ transitionDelay: '200ms' }}>
               <Network className="w-8 h-8 text-purple-500 mb-4" />
-              <h3 className="text-lg font-semibold mb-2 text-white">Cluster Overview</h3>
+              <h3 className="text-lg font-semibold mb-2 text-white">Multi-Cluster Management</h3>
               <p className="text-gray-300 text-sm">
-                Get a supervisory view of all clusters and their status at a glance.
+                Centralized view of all your Kubernetes clusters. Monitor cluster health, resource status, and performance metrics across your entire infrastructure.
               </p>
             </div>
           </div>
