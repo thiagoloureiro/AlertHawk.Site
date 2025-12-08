@@ -18,6 +18,7 @@ export function Header() {
 
   const navLinks = [
     { id: 'home', label: t('nav.home') },
+    { id: 'how-it-works', label: t('nav.howItWorks') },
     { id: 'pricing', label: t('nav.pricing') },
     { id: 'contact', label: t('nav.contact') },
   ];

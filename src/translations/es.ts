@@ -1,5 +1,5 @@
 export const es = {
-  nav: { home: 'Inicio', pricing: 'Precios', contact: 'Contacto' },
+  nav: { home: 'Inicio', howItWorks: 'Cómo Funciona', pricing: 'Precios', contact: 'Contacto' },
   hero: {
     title: 'Monitoreo de Nivel Empresarial para Kubernetes e Infraestructura',
     subtitle: 'Métricas de Kubernetes en tiempo real, monitoreo de uptime, alertas inteligentes y notificaciones instantáneas. Construido para equipos DevOps que necesitan visibilidad completa de su infraestructura.',
@@ -102,4 +102,23 @@ export const es = {
     },
   },
   footer: { description: 'Soluciones de monitoreo modernas para aplicaciones modernas.', connect: 'Conectar' },
+  howItWorks: {
+    title: 'Cómo Funciona',
+    subtitle: 'Ve cómo AlertHawk monitorea tu infraestructura y te mantiene informado',
+    monitoring: {
+      title: 'Monitoreo de Sitios Web',
+      description: 'Monitorea tus sitios web y APIs con intervalos configurables y alertas instantáneas',
+      example: { title: 'Ejemplo de Monitoreo', website: 'www.google.com', interval: 'Cada 1 minuto (configurable)', description: 'La aplicación monitorea el sitio web configurado cada minuto. Según el código de respuesta recibido, el sistema puede enviar alertas a múltiples canales.' },
+      channels: { title: 'Canales de Alerta', teams: 'Teams', telegram: 'Telegram', slack: 'Slack', email: 'Email', webhook: 'Webhook', push: 'Notificación Push' },
+      flow: { monitoring: 'Monitoreo', checking: 'Verificando Estado', success: 'Estado: OK', failed: 'Estado: Fallido', alert: 'Enviando Alerta' },
+    },
+    metrics: {
+      title: 'Monitoreo de Métricas Kubernetes',
+      description: 'Monitorea tus clusters Kubernetes con métricas de CPU y RAM en tiempo real',
+      agent: { title: 'Agente del Cluster', description: 'Un agente instalado en tu cluster Kubernetes recopila métricas de nodos y pods en los namespaces seleccionados.' },
+      connection: { title: 'Conexión Fácil de Clusters', description: 'Conecta cualquier nuevo cluster para enviar datos al servidor AlertHawk con solo unos clics.' },
+      storage: { title: 'Base de Datos ClickHouse Rápida', description: 'Las métricas se almacenan en una base de datos ClickHouse rápida optimizada para datos de series temporales y consultas rápidas.' },
+      visualization: { title: 'Gráficos y Dashboards', description: 'Hermosos gráficos y dashboards proporcionan insights en tiempo real sobre el rendimiento de tu cluster.' },
+    },
+  },
 };

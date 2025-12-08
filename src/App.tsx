@@ -2,6 +2,7 @@ import React from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { HowItWorks } from './components/HowItWorks';
 import { Features } from './components/Features';
 import { Benefits } from './components/Benefits';
 import { KubernetesMonitoring } from './components/KubernetesMonitoring';
@@ -21,6 +22,7 @@ export default function App() {
           <div id="home">
             <Hero />
           </div>
+          <HowItWorks />
           <KubernetesMonitoring />
           <Features />
           <Benefits />

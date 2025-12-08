@@ -1,5 +1,5 @@
 export const pl = {
-  nav: { home: 'Strona główna', pricing: 'Cennik', contact: 'Kontakt' },
+  nav: { home: 'Strona główna', howItWorks: 'Jak to Działa', pricing: 'Cennik', contact: 'Kontakt' },
   hero: {
     title: 'Monitorowanie klasy Enterprise dla Kubernetes i Infrastruktury',
     subtitle: 'Metryki Kubernetes w czasie rzeczywistym, monitorowanie uptime, inteligentne alerty i natychmiastowe powiadomienia. Zbudowane dla zespołów DevOps, które potrzebują pełnej widoczności swojej infrastruktury.',
@@ -102,4 +102,23 @@ export const pl = {
     },
   },
   footer: { description: 'Nowoczesne rozwiązania monitorowania dla nowoczesnych aplikacji.', connect: 'Połącz' },
+  howItWorks: {
+    title: 'Jak to Działa',
+    subtitle: 'Zobacz jak AlertHawk monitoruje Twoją infrastrukturę i utrzymuje Cię w informacji',
+    monitoring: {
+      title: 'Monitorowanie Stron Internetowych',
+      description: 'Monitoruj swoje strony internetowe i API z konfigurowalnymi interwałami i natychmiastowymi alertami',
+      example: { title: 'Przykład Monitorowania', website: 'www.google.com', interval: 'Co 1 minutę (konfigurowalne)', description: 'Aplikacja monitoruje skonfigurowaną stronę internetową co minutę. Zgodnie z otrzymanym kodem odpowiedzi system może wysyłać alerty do wielu kanałów.' },
+      channels: { title: 'Kanały Alertów', teams: 'Teams', telegram: 'Telegram', slack: 'Slack', email: 'Email', webhook: 'Webhook', push: 'Powiadomienie Push' },
+      flow: { monitoring: 'Monitorowanie', checking: 'Sprawdzanie Statusu', success: 'Status: OK', failed: 'Status: Niepowodzenie', alert: 'Wysyłanie Alertu' },
+    },
+    metrics: {
+      title: 'Monitorowanie Metryk Kubernetes',
+      description: 'Monitoruj swoje klastry Kubernetes z metrykami CPU i RAM w czasie rzeczywistym',
+      agent: { title: 'Agent Klastra', description: 'Agent zainstalowany w Twoim klastrze Kubernetes zbiera metryki z węzłów i podów w wybranych przestrzeniach nazw.' },
+      connection: { title: 'Łatwe Połączenie Klastra', description: 'Połącz dowolny nowy klaster, aby wysyłać dane do serwera AlertHawk za pomocą kilku kliknięć.' },
+      storage: { title: 'Szybka Baza Danych ClickHouse', description: 'Metryki są przechowywane w szybkiej bazie danych ClickHouse zoptymalizowanej dla danych szeregów czasowych i szybkich zapytań.' },
+      visualization: { title: 'Wykresy i Panele', description: 'Piękne wykresy i panele zapewniają wgląd w czasie rzeczywistym w wydajność Twojego klastra.' },
+    },
+  },
 };

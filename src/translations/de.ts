@@ -1,5 +1,5 @@
 export const de = {
-  nav: { home: 'Startseite', pricing: 'Preise', contact: 'Kontakt' },
+  nav: { home: 'Startseite', howItWorks: 'Wie es Funktioniert', pricing: 'Preise', contact: 'Kontakt' },
   hero: {
     title: 'Enterprise-Monitoring für Kubernetes & Infrastruktur',
     subtitle: 'Echtzeit-Kubernetes-Metriken, Uptime-Monitoring, intelligente Benachrichtigungen und sofortige Warnungen. Entwickelt für DevOps-Teams, die umfassende Einblicke in ihre Infrastruktur benötigen.',
@@ -102,4 +102,23 @@ export const de = {
     },
   },
   footer: { description: 'Moderne Monitoring-Lösungen für moderne Anwendungen.', connect: 'Verbinden' },
+  howItWorks: {
+    title: 'Wie es Funktioniert',
+    subtitle: 'Sehen Sie, wie AlertHawk Ihre Infrastruktur überwacht und Sie auf dem Laufenden hält',
+    monitoring: {
+      title: 'Website-Monitoring',
+      description: 'Überwachen Sie Ihre Websites und APIs mit konfigurierbaren Intervallen und sofortigen Warnungen',
+      example: { title: 'Monitoring-Beispiel', website: 'www.google.com', interval: 'Alle 1 Minute (konfigurierbar)', description: 'Die Anwendung überwacht die konfigurierte Website jede Minute. Je nach erhaltenem Antwortcode kann das System Warnungen an mehrere Kanäle senden.' },
+      channels: { title: 'Warnkanäle', teams: 'Teams', telegram: 'Telegram', slack: 'Slack', email: 'Email', webhook: 'Webhook', push: 'Push-Benachrichtigung' },
+      flow: { monitoring: 'Monitoring', checking: 'Status Prüfen', success: 'Status: OK', failed: 'Status: Fehlgeschlagen', alert: 'Warnung Senden' },
+    },
+    metrics: {
+      title: 'Kubernetes-Metriken-Monitoring',
+      description: 'Überwachen Sie Ihre Kubernetes-Cluster mit Echtzeit-CPU- und RAM-Metriken',
+      agent: { title: 'Cluster-Agent', description: 'Ein auf Ihrem Kubernetes-Cluster installierter Agent sammelt Metriken von Knoten und Pods in ausgewählten Namespaces.' },
+      connection: { title: 'Einfache Cluster-Verbindung', description: 'Verbinden Sie jeden neuen Cluster, um Daten mit nur wenigen Klicks an den AlertHawk-Server zu senden.' },
+      storage: { title: 'Schnelle ClickHouse-Datenbank', description: 'Metriken werden in einer schnellen ClickHouse-Datenbank gespeichert, die für Zeitreihendaten und schnelle Abfragen optimiert ist.' },
+      visualization: { title: 'Diagramme & Dashboards', description: 'Schöne Diagramme und Dashboards bieten Echtzeit-Einblicke in die Leistung Ihres Clusters.' },
+    },
+  },
 };

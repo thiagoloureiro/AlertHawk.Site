@@ -1,6 +1,7 @@
 export const en = {
   nav: {
     home: 'Home',
+    howItWorks: 'How it Works',
     pricing: 'Pricing',
     contact: 'Contact',
   },
@@ -235,5 +236,55 @@ export const en = {
   footer: {
     description: 'Modern monitoring solutions for modern applications.',
     connect: 'Connect',
+  },
+  howItWorks: {
+    title: 'How It Works',
+    subtitle: 'See how AlertHawk monitors your infrastructure and keeps you informed',
+    monitoring: {
+      title: 'Website Monitoring',
+      description: 'Monitor your websites and APIs with configurable intervals and instant alerts',
+      example: {
+        title: 'Monitoring Example',
+        website: 'www.google.com',
+        interval: 'Every 1 minute (configurable)',
+        description: 'The application monitors the configured website every minute. According to the response code received, the system can send alerts to multiple channels.',
+      },
+      channels: {
+        title: 'Alert Channels',
+        teams: 'Teams',
+        telegram: 'Telegram',
+        slack: 'Slack',
+        email: 'Email',
+        webhook: 'Webhook',
+        push: 'Push Notification',
+      },
+      flow: {
+        monitoring: 'Monitoring',
+        checking: 'Checking Status',
+        success: 'Status: OK',
+        failed: 'Status: Failed',
+        alert: 'Sending Alert',
+      },
+    },
+    metrics: {
+      title: 'Kubernetes Metrics Monitoring',
+      description: 'Monitor your Kubernetes clusters with real-time CPU and RAM metrics',
+      agent: {
+        title: 'Cluster Agent',
+        description: 'An agent installed on your Kubernetes cluster collects metrics from nodes and pods in selected namespaces.',
+      },
+      connection: {
+        title: 'Easy Cluster Connection',
+        description: 'Connect any new cluster to send data to the AlertHawk Server with just a few clicks.',
+      },
+      storage: {
+        title: 'Fast ClickHouse Database',
+        description: 'Metrics are stored in a fast ClickHouse database optimized for time-series data and fast queries.',
+      },
+      visualization: {
+        title: 'Charts & Dashboards',
+        description: 'Beautiful charts and dashboards provide real-time insights into your cluster performance.',
+      },
+    },
   },
 };

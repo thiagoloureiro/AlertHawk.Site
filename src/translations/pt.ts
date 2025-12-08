@@ -1,6 +1,7 @@
 export const pt = {
   nav: {
     home: 'Início',
+    howItWorks: 'Como Funciona',
     pricing: 'Preços',
     contact: 'Contato',
   },
@@ -235,5 +236,55 @@ export const pt = {
   footer: {
     description: 'Soluções de monitoramento modernas para aplicações modernas.',
     connect: 'Conectar',
+  },
+  howItWorks: {
+    title: 'Como Funciona',
+    subtitle: 'Veja como o AlertHawk monitora sua infraestrutura e mantém você informado',
+    monitoring: {
+      title: 'Monitoramento de Websites',
+      description: 'Monitore seus websites e APIs com intervalos configuráveis e alertas instantâneos',
+      example: {
+        title: 'Exemplo de Monitoramento',
+        website: 'www.google.com',
+        interval: 'A cada 1 minuto (configurável)',
+        description: 'A aplicação monitora o website configurado a cada minuto. De acordo com o código de resposta recebido, o sistema pode enviar alertas para múltiplos canais.',
+      },
+      channels: {
+        title: 'Canais de Alerta',
+        teams: 'Teams',
+        telegram: 'Telegram',
+        slack: 'Slack',
+        email: 'Email',
+        webhook: 'Webhook',
+        push: 'Notificação Push',
+      },
+      flow: {
+        monitoring: 'Monitoramento',
+        checking: 'Verificando Status',
+        success: 'Status: OK',
+        failed: 'Status: Falhou',
+        alert: 'Enviando Alerta',
+      },
+    },
+    metrics: {
+      title: 'Monitoramento de Métricas Kubernetes',
+      description: 'Monitore seus clusters Kubernetes com métricas de CPU e RAM em tempo real',
+      agent: {
+        title: 'Agente do Cluster',
+        description: 'Um agente instalado no seu cluster Kubernetes coleta métricas de nós e pods nos namespaces selecionados.',
+      },
+      connection: {
+        title: 'Conexão Fácil de Clusters',
+        description: 'Conecte qualquer novo cluster para enviar dados ao servidor AlertHawk com apenas alguns cliques.',
+      },
+      storage: {
+        title: 'Banco de Dados ClickHouse Rápido',
+        description: 'As métricas são armazenadas em um banco de dados ClickHouse rápido otimizado para dados de séries temporais e consultas rápidas.',
+      },
+      visualization: {
+        title: 'Gráficos e Dashboards',
+        description: 'Gráficos e dashboards bonitos fornecem insights em tempo real sobre o desempenho do seu cluster.',
+      },
+    },
   },
 };
