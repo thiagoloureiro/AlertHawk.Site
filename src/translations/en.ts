@@ -143,7 +143,7 @@ export const en = {
   },
   pricing: {
     title: 'Choose Your Plan',
-    subtitle: 'Self-hosted and free, or let us handle everything with our managed SaaS offering.',
+    subtitle: 'Self-hosted and completely free. Deploy on your infrastructure with full control.',
     openSource: {
       badge: 'Open Source',
       price: '$0',

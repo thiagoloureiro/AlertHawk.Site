@@ -143,7 +143,7 @@ export const pt = {
   },
   pricing: {
     title: 'Escolha Seu Plano',
-    subtitle: 'Self-hosted e gratuito, ou deixe-nos cuidar de tudo com nossa oferta SaaS gerenciada.',
+    subtitle: 'Self-hosted e completamente gratuito. Implante em sua infraestrutura com controle total.',
     openSource: {
       badge: 'Código Aberto',
       price: '$0',

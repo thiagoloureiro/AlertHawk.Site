@@ -55,7 +55,7 @@ export const de = {
   },
   pricing: {
     title: 'Wählen Sie Ihren Plan',
-    subtitle: 'Self-hosted und kostenlos, oder lassen Sie uns alles mit unserem verwalteten SaaS-Angebot übernehmen.',
+    subtitle: 'Self-hosted und völlig kostenlos. Bereitstellen auf Ihrer Infrastruktur mit vollständiger Kontrolle.',
     openSource: {
       badge: 'Open Source',
       price: '$0',
