@@ -4,6 +4,7 @@ export const pt = {
     howItWorks: 'Como Funciona',
     pricing: 'Preços',
     contact: 'Contato',
+    docs: 'Documentação',
   },
   hero: {
     title: 'Monitoramento de Classe Empresarial para Kubernetes e Infraestrutura',

@@ -1,5 +1,5 @@
 export const it = {
-  nav: { home: 'Home', howItWorks: 'Come Funziona', pricing: 'Prezzi', contact: 'Contatti' },
+  nav: { home: 'Home', howItWorks: 'Come Funziona', pricing: 'Prezzi', contact: 'Contatti', docs: 'Documentazione' },
   hero: {
     title: 'Monitoraggio Enterprise per Kubernetes e Infrastruttura',
     subtitle: 'Metriche Kubernetes in tempo reale, monitoraggio uptime, alerting intelligente e notifiche istantanee. Progettato per team DevOps che necessitano di visibilità completa della loro infrastruttura.',

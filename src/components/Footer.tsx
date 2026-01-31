@@ -1,4 +1,4 @@
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, BookOpen } from 'lucide-react';
 import logoImage from '../assets/logo.png';
 import googlePlayBadge from '../assets/store-badges/google-play-badge.png';
 import appStoreBadge from '../assets/store-badges/app-store-badge.png';
@@ -25,6 +25,16 @@ export function Footer() {
           <div className="relative z-20 md:col-span-2">
             <h3 className="text-white font-semibold mb-4">Connect</h3>
             <div className="flex flex-wrap items-center gap-6">
+              <a 
+                href="https://docs.alerthawk.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block p-2 rounded-full hover:bg-gray-800 hover:text-purple-400 transition-colors cursor-pointer"
+                onClick={(e) => e.stopPropagation()}
+                aria-label="Documentation"
+              >
+                <BookOpen className="w-6 h-6" />
+              </a>
               <a 
                 href="https://github.com/thiagoloureiro/AlertHawk"
                 target="_blank"

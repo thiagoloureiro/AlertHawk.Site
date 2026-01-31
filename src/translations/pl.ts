@@ -1,5 +1,5 @@
 export const pl = {
-  nav: { home: 'Strona główna', howItWorks: 'Jak to Działa', pricing: 'Cennik', contact: 'Kontakt' },
+  nav: { home: 'Strona główna', howItWorks: 'Jak to Działa', pricing: 'Cennik', contact: 'Kontakt', docs: 'Dokumentacja' },
   hero: {
     title: 'Monitorowanie klasy Enterprise dla Kubernetes i Infrastruktury',
     subtitle: 'Metryki Kubernetes w czasie rzeczywistym, monitorowanie uptime, inteligentne alerty i natychmiastowe powiadomienia. Zbudowane dla zespołów DevOps, które potrzebują pełnej widoczności swojej infrastruktury.',

@@ -4,6 +4,7 @@ export const en = {
     howItWorks: 'How it Works',
     pricing: 'Pricing',
     contact: 'Contact',
+    docs: 'Docs',
   },
   hero: {
     title: 'Enterprise-Grade Monitoring for Kubernetes & Infrastructure',

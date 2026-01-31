@@ -21,6 +21,7 @@ export function Header() {
     { id: 'how-it-works', label: t('nav.howItWorks') },
     { id: 'pricing', label: t('nav.pricing') },
     { id: 'contact', label: t('nav.contact') },
+    { id: 'docs', label: t('nav.docs'), href: 'https://docs.alerthawk.net/', external: true },
   ];
 
   return (
@@ -47,19 +48,31 @@ export function Header() {
           {/* Desktop Menu - Center */}
           <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2">
             <div className="flex items-center space-x-1 bg-gray-800/50 backdrop-blur-sm px-2 py-2 rounded-lg border border-gray-700/50">
-              {navLinks.map((link, index) => (
-                <a
-                  key={link.id}
-                  href={`#${link.id}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(link.id);
-                  }}
-                  className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-md transition-all duration-200 cursor-pointer"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                'external' in link && link.external && link.href ? (
+                  <a
+                    key={link.id}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-md transition-all duration-200 cursor-pointer"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <a
+                    key={link.id}
+                    href={`#${link.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(link.id);
+                    }}
+                    className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-md transition-all duration-200 cursor-pointer"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
             </div>
           </div>
 
@@ -87,19 +100,31 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-gray-800 bg-gray-900/95 backdrop-blur-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(link.id);
-                }}
-                className="text-gray-300 hover:text-white transition-colors cursor-pointer py-2"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              'external' in link && link.external && link.href ? (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors cursor-pointer py-2"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(link.id);
+                  }}
+                  className="text-gray-300 hover:text-white transition-colors cursor-pointer py-2"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
         </div>
       )}
