@@ -218,21 +218,6 @@ export const en = {
       description: 'Try AlertHawk in action. Explore the dashboard and see all features.',
       view: 'View Demo',
     },
-    form: {
-      title: 'Contact Us for Pricing',
-      subtitle: 'For SaaS pricing, support, and inquiries',
-      email: 'Your Email',
-      emailPlaceholder: 'your.email@example.com',
-      message: 'Your Message',
-      messagePlaceholder: 'Tell us about your needs, questions, or how we can help...',
-      send: 'Send Message',
-      sending: 'Sending...',
-      success: {
-        title: 'Message Sent!',
-        description: "We'll get back to you as soon as possible.",
-      },
-      error: 'Something went wrong. Please try again or email us directly at alerthawk@alerthawk.net',
-    },
   },
   footer: {
     description: 'Modern monitoring solutions for modern applications.',

@@ -88,18 +88,6 @@ export const it = {
     subtitle: 'Hai domande, hai bisogno di supporto o vuoi contribuire? Ci piacerebbe sentirti.',
     github: { title: 'GitHub', description: 'Visualizza il codice sorgente, segnala problemi o contribuisci al progetto.', visit: 'Visita GitHub' },
     demo: { title: 'Demo Live', description: 'Prova AlertHawk in azione. Esplora la dashboard e vedi tutte le funzionalità.', view: 'Visualizza Demo' },
-    form: {
-      title: 'Contattaci per i Prezzi',
-      subtitle: 'Per prezzi SaaS, supporto e richieste',
-      email: 'La Tua Email',
-      emailPlaceholder: 'tua.email@esempio.com',
-      message: 'Il Tuo Messaggio',
-      messagePlaceholder: 'Raccontaci delle tue esigenze, domande o come possiamo aiutare...',
-      send: 'Invia Messaggio',
-      sending: 'Invio...',
-      success: { title: 'Messaggio Inviato!', description: 'Ti risponderemo il prima possibile.' },
-      error: 'Qualcosa è andato storto. Riprova o inviaci un\'email direttamente a alerthawk@alerthawk.net',
-    },
   },
   footer: { description: 'Soluzioni di monitoraggio moderne per applicazioni moderne.', connect: 'Connetti' },
   howItWorks: {
