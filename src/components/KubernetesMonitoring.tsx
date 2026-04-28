@@ -12,8 +12,7 @@ export function KubernetesMonitoring() {
   const { t } = useLanguage();
 
   return (
-    <section ref={ref} id="kubernetes-monitoring" className="py-20 bg-gray-900 relative">
-      <div className="background-glow opacity-50" />
+    <section ref={ref} id="kubernetes-monitoring" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -66,7 +65,7 @@ export function KubernetesMonitoring() {
                 <img
                   src={clusterMetricsImg}
                   alt="Cluster Metrics Dashboard showing CPU and memory usage across nodes"
-                  className="w-full h-auto"
+                  className="w-full h-auto opacity-80"
                 />
               </div>
             </div>
@@ -81,7 +80,7 @@ export function KubernetesMonitoring() {
                 <img
                   src={applicationMetricsImg}
                   alt="Application Metrics Dashboard showing pod and container metrics"
-                  className="w-full h-auto"
+                  className="w-full h-auto opacity-80"
                 />
               </div>
             </div>
@@ -96,7 +95,7 @@ export function KubernetesMonitoring() {
                 <img
                   src={clustersDiagramImg}
                   alt="Clusters Diagram showing cluster overview and status"
-                  className="w-full h-auto"
+                  className="w-full h-auto opacity-80"
                 />
               </div>
             </div>

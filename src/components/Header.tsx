@@ -40,7 +40,7 @@ export function Header() {
             <img 
               src={logoImage} 
               alt="AlertHawk Logo" 
-              className="w-10 h-10 md:w-12 md:h-12"
+              className="w-10 h-10 md:w-12 md:h-12 opacity-80"
             />
             <span className="text-xl md:text-2xl font-bold text-white tracking-tight">AlertHawk</span>
           </a>

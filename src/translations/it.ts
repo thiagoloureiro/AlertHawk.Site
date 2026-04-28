@@ -16,6 +16,32 @@ export const it = {
     applicationDashboard: { title: 'Dashboard Metriche Applicazione', subtitle: 'Monitora l\'utilizzo di CPU e memoria di pod e container nei namespace' },
     clustersDiagram: { title: 'Diagramma Cluster', subtitle: 'Vista di supervisione di tutti i cluster e il loro stato' },
   },
+  finops: {
+    title: 'FinOps per Azure Cloud',
+    subtitle:
+      'Recupera metriche di costo e utilizzo da Azure, esplora grafici dettagliati e usa l’analisi AI per individuare opportunità di ottimizzazione sulle risorse cloud.',
+    azureMetrics: {
+      title: 'Metriche da Azure',
+      description:
+        'Collega la tua sottoscrizione Azure e recupera segnali di costo e utilizzo per sottoscrizioni, resource group e servizi.',
+    },
+    detailedGraphs: {
+      title: 'Grafici e Dettagli',
+      description:
+        'Comprendi la spesa e i trend con grafici, confronti tra periodi e breakdown per tipo di servizio e resource group.',
+    },
+    aiAnalysis: {
+      title: 'Analisi AI',
+      description:
+        'Insight e raccomandazioni AI per evidenziare sprechi, sotto-utilizzo e azioni di right-sizing sulle risorse cloud.',
+    },
+    screens: {
+      overview: { title: 'Panoramica', subtitle: 'Costo MTD, risorse analizzate e sottoscrizioni in un’unica vista' },
+      historical: { title: 'Risultati Storici', subtitle: 'Trend di costo giornalieri/mensili nel tempo' },
+      costDetails: { title: 'Dettagli Costi', subtitle: 'Breakdown per resource group e tipo di servizio' },
+      aiRecommendations: { title: 'Raccomandazioni AI', subtitle: 'Suggerimenti di risparmio prioritizzati con executive summary' },
+    },
+  },
   features: {
     title: 'Funzionalità di Monitoraggio Enterprise',
     subtitle: 'Capacità di monitoraggio complete progettate per infrastrutture moderne e ambienti Kubernetes',

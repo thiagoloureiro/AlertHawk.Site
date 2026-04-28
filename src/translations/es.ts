@@ -16,6 +16,32 @@ export const es = {
     applicationDashboard: { title: 'Dashboard de Métricas de la Aplicación', subtitle: 'Monitorea el uso de CPU y memoria de pods y contenedores en namespaces' },
     clustersDiagram: { title: 'Diagrama de Clusters', subtitle: 'Vista supervisora de todos los clusters y su estado' },
   },
+  finops: {
+    title: 'FinOps para Azure Cloud',
+    subtitle:
+      'Obtén métricas de costos y uso desde Azure, explora gráficos detallados y usa análisis con IA para encontrar oportunidades de optimización en tus recursos cloud.',
+    azureMetrics: {
+      title: 'Métricas desde Azure',
+      description:
+        'Conecta tu suscripción de Azure y obtén señales de costos y uso por suscripción, grupo de recursos y servicio.',
+    },
+    detailedGraphs: {
+      title: 'Gráficos y Desgloses',
+      description:
+        'Entiende el gasto y las tendencias con gráficos, comparaciones por período y desgloses por tipo de servicio y grupo de recursos.',
+    },
+    aiAnalysis: {
+      title: 'Análisis con IA',
+      description:
+        'Recomendaciones con IA para detectar desperdicio, subutilización y acciones de right-sizing en tus recursos cloud.',
+    },
+    screens: {
+      overview: { title: 'Vista General', subtitle: 'Costo MTD, recursos analizados y suscripciones en un solo lugar' },
+      historical: { title: 'Resultados Históricos', subtitle: 'Tendencias de costo diarias/mensuales a lo largo del tiempo' },
+      costDetails: { title: 'Detalles de Costos', subtitle: 'Desglose por grupo de recursos y tipo de servicio' },
+      aiRecommendations: { title: 'Recomendaciones IA', subtitle: 'Ahorros priorizados con resumen ejecutivo' },
+    },
+  },
   features: {
     title: 'Características de Monitoreo Empresarial',
     subtitle: 'Capacidades de monitoreo integrales diseñadas para infraestructura moderna y entornos Kubernetes',

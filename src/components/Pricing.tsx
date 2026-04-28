@@ -8,8 +8,7 @@ export function Pricing() {
   const { t } = useLanguage();
 
   return (
-    <section ref={ref} id="pricing" className="py-20 bg-gray-900 relative">
-      <div className="background-glow opacity-50" />
+    <section ref={ref} id="pricing" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-up">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-700/20 mb-6">

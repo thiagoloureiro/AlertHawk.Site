@@ -40,6 +40,44 @@ export const en = {
       subtitle: 'Supervisory view of all clusters and their status',
     },
   },
+  finops: {
+    title: 'FinOps for Azure Cloud',
+    subtitle:
+      'Fetch cost and usage metrics from Azure, explore detailed graphs, and use AI analysis to identify optimization opportunities across your cloud resources.',
+    azureMetrics: {
+      title: 'Azure Metrics Fetching',
+      description:
+        'Connect your Azure subscription and pull cost and usage signals for subscriptions, resource groups, and services.',
+    },
+    detailedGraphs: {
+      title: 'Detailed Graphs & Breakdowns',
+      description:
+        'Understand spend and trends with interactive charts, period comparisons, and cost breakdowns by service type and resource group.',
+    },
+    aiAnalysis: {
+      title: 'AI Analysis & Recommendations',
+      description:
+        'Get AI-powered insights across cloud resources to highlight waste, underutilization, and actionable right-sizing opportunities.',
+    },
+    screens: {
+      overview: {
+        title: 'Portfolio Overview',
+        subtitle: 'Track MTD cost, analyzed resources, and subscriptions in one place',
+      },
+      historical: {
+        title: 'Historical Results',
+        subtitle: 'Visualize daily/monthly cost trends over time',
+      },
+      costDetails: {
+        title: 'Cost Details',
+        subtitle: 'Break down spend by resource group and service type',
+      },
+      aiRecommendations: {
+        title: 'AI Recommendations',
+        subtitle: 'Prioritized savings suggestions with an executive summary',
+      },
+    },
+  },
   features: {
     title: 'Enterprise Monitoring Features',
     subtitle: 'Comprehensive monitoring capabilities designed for modern infrastructure and Kubernetes environments',

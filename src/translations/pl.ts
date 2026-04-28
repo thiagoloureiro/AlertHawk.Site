@@ -16,6 +16,32 @@ export const pl = {
     applicationDashboard: { title: 'Panel Metryk Aplikacji', subtitle: 'Monitoruj wykorzystanie CPU i pamięci podów i kontenerów w przestrzeniach nazw' },
     clustersDiagram: { title: 'Diagram Klastrów', subtitle: 'Widok nadzorczy wszystkich klastrów i ich statusu' },
   },
+  finops: {
+    title: 'FinOps dla Azure Cloud',
+    subtitle:
+      'Pobieraj metryki kosztów i użycia z Azure, przeglądaj szczegółowe wykresy i korzystaj z analizy AI, aby znaleźć możliwości optymalizacji zasobów chmurowych.',
+    azureMetrics: {
+      title: 'Metryki z Azure',
+      description:
+        'Połącz subskrypcję Azure i pobieraj sygnały kosztów oraz użycia dla subskrypcji, grup zasobów i usług.',
+    },
+    detailedGraphs: {
+      title: 'Szczegółowe Wykresy',
+      description:
+        'Zrozum koszty i trendy dzięki wykresom, porównaniom okresów i podziałom kosztów według typu usługi oraz grupy zasobów.',
+    },
+    aiAnalysis: {
+      title: 'Analiza AI',
+      description:
+        'Wnioski i rekomendacje AI, które wskazują marnotrawstwo, niewykorzystanie oraz konkretne działania right-sizing dla zasobów chmurowych.',
+    },
+    screens: {
+      overview: { title: 'Przegląd', subtitle: 'Koszt MTD, przeanalizowane zasoby i subskrypcje w jednym miejscu' },
+      historical: { title: 'Wyniki Historyczne', subtitle: 'Trendy kosztów dziennych/miesięcznych w czasie' },
+      costDetails: { title: 'Szczegóły Kosztów', subtitle: 'Podział według grup zasobów i typu usługi' },
+      aiRecommendations: { title: 'Rekomendacje AI', subtitle: 'Priorytety oszczędności z podsumowaniem wykonawczym' },
+    },
+  },
   features: {
     title: 'Funkcje Monitorowania Enterprise',
     subtitle: 'Kompleksowe możliwości monitorowania zaprojektowane dla nowoczesnej infrastruktury i środowisk Kubernetes',

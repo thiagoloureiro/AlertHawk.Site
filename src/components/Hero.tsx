@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Github } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import appImage from '../assets/app.png';
 import mobile1 from '../assets/mobile1.png';
 import mobile2 from '../assets/mobile2.png';
@@ -10,7 +10,6 @@ export function Hero() {
   const { t } = useLanguage();
   return (
     <section className="pt-32 pb-20 relative">
-      <div className="background-glow opacity-75" />
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center fade-up">
           <div className="flex items-center justify-center space-x-2 mb-4">
@@ -57,7 +56,7 @@ export function Hero() {
             <img
               src={appImage}
               alt="Dashboard Preview"
-              className="rounded-lg"
+              className="rounded-lg opacity-80"
             />
           </div>
         </div>
@@ -68,21 +67,21 @@ export function Hero() {
               <img
                 src={mobile1}
                 alt="Mobile App Screenshot 1"
-                className="rounded-lg w-full"
+                className="rounded-lg w-full opacity-80"
               />
             </div>
             <div className="glass-card p-1 rounded-xl w-64">
               <img
                 src={mobile2}
                 alt="Mobile App Screenshot 2"
-                className="rounded-lg w-full"
+                className="rounded-lg w-full opacity-80"
               />
             </div>
             <div className="glass-card p-1 rounded-xl w-64">
               <img
                 src={mobile3}
                 alt="Mobile App Screenshot 3"
-                className="rounded-lg w-full"
+                className="rounded-lg w-full opacity-80"
               />
             </div>
           </div>

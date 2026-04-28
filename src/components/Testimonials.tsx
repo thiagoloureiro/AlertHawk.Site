@@ -23,7 +23,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 relative">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
           Trusted by Leading Teams
@@ -37,7 +37,7 @@ export function Testimonials() {
                 <img
                   src={testimonial.image}
                   alt={testimonial.author}
-                  className="w-12 h-12 rounded-full ring-2 ring-blue-500/50"
+                  className="w-12 h-12 rounded-full opacity-80 ring-2 ring-blue-500/50"
                 />
                 <div>
                   <p className="font-semibold text-white">{testimonial.author}</p>

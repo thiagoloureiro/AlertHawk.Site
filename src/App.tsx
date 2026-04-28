@@ -6,24 +6,25 @@ import { HowItWorks } from './components/HowItWorks';
 import { Features } from './components/Features';
 import { Benefits } from './components/Benefits';
 import { KubernetesMonitoring } from './components/KubernetesMonitoring';
+import { FinOps } from './components/FinOps';
 import { DeploymentInfo } from './components/DeploymentInfo';
 import { Pricing } from './components/Pricing';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { SiteLayout } from './components/SiteLayout';
 
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-gray-900 relative overflow-hidden">
-        <div className="background-grid" />
-        <div className="background-glow" />
+      <SiteLayout>
         <Header />
-        <main>
+        <main className="relative z-10">
           <div id="home">
             <Hero />
           </div>
           <HowItWorks />
           <KubernetesMonitoring />
+          <FinOps />
           <Features />
           <Benefits />
           <DeploymentInfo />
@@ -31,7 +32,7 @@ export default function App() {
           <Contact />
         </main>
         <Footer />
-      </div>
+      </SiteLayout>
     </LanguageProvider>
   );
 }

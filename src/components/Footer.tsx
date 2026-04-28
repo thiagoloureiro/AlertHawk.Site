@@ -5,7 +5,7 @@ import appStoreBadge from '../assets/store-badges/app-store-badge.png';
 
 export function Footer() {
   return (
-    <footer className="relative bg-gray-950 text-gray-300 py-12 z-10">
+    <footer className="relative z-10 border-t border-gray-800/80 bg-gray-950/75 text-gray-300 py-12 backdrop-blur-md">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="relative z-20">
@@ -13,7 +13,7 @@ export function Footer() {
               <img 
                 src={logoImage}
                 alt="AlertHawk Logo" 
-                className="w-8 h-8"
+                className="w-8 h-8 opacity-80"
               />
               <span className="text-xl font-bold text-white">AlertHawk</span>
             </div>
@@ -57,24 +57,24 @@ export function Footer() {
                 href="https://apps.apple.com/us/app/alerthawk/id6739902511"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-80"
+                className="transition-opacity hover:opacity-100"
               >
                 <img 
                   src={appStoreBadge} 
                   alt="Download on the App Store" 
-                  className="h-12"
+                  className="h-12 opacity-80"
                 />
               </a>
               <a 
                 href="https://play.google.com/store/apps/details?id=net.alerthawk.alerthawk_mobile"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-80"
+                className="transition-opacity hover:opacity-100"
               >
                 <img 
                   src={googlePlayBadge} 
                   alt="Get it on Google Play" 
-                  className="h-12"
+                  className="h-12 opacity-80"
                 />
               </a>
             </div>

@@ -16,6 +16,32 @@ export const de = {
     applicationDashboard: { title: 'Anwendungs-Metriken-Dashboard', subtitle: 'Überwachen Sie die CPU- und Speichernutzung von Pods und Containern in Namespaces' },
     clustersDiagram: { title: 'Cluster-Diagramm', subtitle: 'Überwachungsansicht aller Cluster und ihres Status' },
   },
+  finops: {
+    title: 'FinOps für Azure Cloud',
+    subtitle:
+      'Rufen Sie Kosten- und Nutzungsmetriken aus Azure ab, analysieren Sie detaillierte Diagramme und nutzen Sie KI-Analysen, um Optimierungspotenziale in Ihren Cloud-Ressourcen zu finden.',
+    azureMetrics: {
+      title: 'Azure-Metriken abrufen',
+      description:
+        'Verbinden Sie Ihr Azure-Abonnement und ziehen Sie Kosten- und Nutzungssignale für Abonnements, Ressourcengruppen und Dienste.',
+    },
+    detailedGraphs: {
+      title: 'Detaillierte Diagramme',
+      description:
+        'Verstehen Sie Ausgaben und Trends mit Diagrammen, Periodenvergleichen und Kostenaufschlüsselungen nach Diensttyp und Ressourcengruppe.',
+    },
+    aiAnalysis: {
+      title: 'KI-Analyse',
+      description:
+        'KI-gestützte Erkenntnisse, um Verschwendung, Unterauslastung und konkrete Right-Sizing-Maßnahmen für Ihre Cloud-Ressourcen zu identifizieren.',
+    },
+    screens: {
+      overview: { title: 'Übersicht', subtitle: 'MTD-Kosten, analysierte Ressourcen und Abonnements auf einen Blick' },
+      historical: { title: 'Historische Ergebnisse', subtitle: 'Tägliche/monatliche Kostentrends im Zeitverlauf' },
+      costDetails: { title: 'Kostendetails', subtitle: 'Aufschlüsselung nach Ressourcengruppe und Diensttyp' },
+      aiRecommendations: { title: 'KI-Empfehlungen', subtitle: 'Priorisierte Einsparungen mit Executive Summary' },
+    },
+  },
   features: {
     title: 'Enterprise-Monitoring-Funktionen',
     subtitle: 'Umfassende Monitoring-Fähigkeiten für moderne Infrastrukturen und Kubernetes-Umgebungen',
