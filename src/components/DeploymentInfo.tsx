@@ -1,5 +1,6 @@
 import React from 'react';
-import { Github, Container, ArrowRight, Code, Database, Network, Shield } from 'lucide-react';
+import { Container, ArrowRight, Code, Database, Network, Shield } from 'lucide-react';
+import { Github } from './icons/BrandIcons';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function DeploymentInfo() {

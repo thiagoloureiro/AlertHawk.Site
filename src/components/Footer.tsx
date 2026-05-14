@@ -1,4 +1,5 @@
-import { Github, Linkedin, BookOpen } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { Github, Linkedin } from './icons/BrandIcons';
 import logoImage from '../assets/logo.png';
 import googlePlayBadge from '../assets/store-badges/google-play-badge.png';
 import appStoreBadge from '../assets/store-badges/app-store-badge.png';

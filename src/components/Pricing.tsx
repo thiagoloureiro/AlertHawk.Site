@@ -1,5 +1,6 @@
 import React from 'react';
-import { Check, Github, Zap, Shield } from 'lucide-react';
+import { Check, Zap, Shield } from 'lucide-react';
+import { Github } from './icons/BrandIcons';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLanguage } from '../contexts/LanguageContext';
 

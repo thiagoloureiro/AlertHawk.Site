@@ -1,5 +1,6 @@
 import React from 'react';
-import { Github, MessageCircle, Globe } from 'lucide-react';
+import { MessageCircle, Globe } from 'lucide-react';
+import { Github } from './icons/BrandIcons';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLanguage } from '../contexts/LanguageContext';
 
