@@ -1,10 +1,8 @@
 # Stage 1
-FROM node:26 AS react-build
+FROM node:26 as react-build
 WORKDIR /app
-COPY --chown=node:node package.json package-lock.json ./
-USER node
-RUN npm ci
-COPY --chown=node:node . .
+COPY . ./
+RUN npm install
 RUN npm run build
 
 # Stage 2 - the production environment
