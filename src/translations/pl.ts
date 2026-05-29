@@ -115,7 +115,7 @@ export const pl = {
     github: { title: 'GitHub', description: 'Zobacz kod źródłowy, zgłoś problemy lub przyczyn się do projektu.', visit: 'Odwiedź GitHub' },
     demo: { title: 'Demo na Żywo', description: 'Wypróbuj AlertHawk w akcji. Poznaj panel i zobacz wszystkie funkcje.', view: 'Zobacz Demo' },
   },
-  footer: { description: 'Nowoczesne rozwiązania monitorowania dla nowoczesnych aplikacji.', connect: 'Połącz' },
+  footer: { description: 'Nowoczesne rozwiązania monitorowania dla nowoczesnych aplikacji.', connect: 'Połącz', privacy: 'Polityka prywatności' },
   howItWorks: {
     title: 'Jak to Działa',
     subtitle: 'Zobacz jak AlertHawk monitoruje Twoją infrastrukturę i utrzymuje Cię w informacji',

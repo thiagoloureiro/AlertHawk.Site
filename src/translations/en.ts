@@ -260,6 +260,7 @@ export const en = {
   footer: {
     description: 'Modern monitoring solutions for modern applications.',
     connect: 'Connect',
+    privacy: 'Privacy Policy',
   },
   howItWorks: {
     title: 'How It Works',

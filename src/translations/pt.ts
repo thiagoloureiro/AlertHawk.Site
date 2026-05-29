@@ -260,6 +260,7 @@ export const pt = {
   footer: {
     description: 'Soluções de monitoramento modernas para aplicações modernas.',
     connect: 'Conectar',
+    privacy: 'Política de Privacidade',
   },
   howItWorks: {
     title: 'Como Funciona',

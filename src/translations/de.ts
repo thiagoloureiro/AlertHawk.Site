@@ -115,7 +115,7 @@ export const de = {
     github: { title: 'GitHub', description: 'Quellcode anzeigen, Probleme melden oder zum Projekt beitragen.', visit: 'GitHub besuchen' },
     demo: { title: 'Live-Demo', description: 'Probieren Sie AlertHawk aus. Erkunden Sie das Dashboard und sehen Sie alle Funktionen.', view: 'Demo anzeigen' },
   },
-  footer: { description: 'Moderne Monitoring-Lösungen für moderne Anwendungen.', connect: 'Verbinden' },
+  footer: { description: 'Moderne Monitoring-Lösungen für moderne Anwendungen.', connect: 'Verbinden', privacy: 'Datenschutz' },
   howItWorks: {
     title: 'Wie es Funktioniert',
     subtitle: 'Sehen Sie, wie AlertHawk Ihre Infrastruktur überwacht und Sie auf dem Laufenden hält',

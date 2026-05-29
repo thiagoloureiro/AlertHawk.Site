@@ -3,8 +3,10 @@ import { Github, Linkedin } from './icons/BrandIcons';
 import logoImage from '../assets/logo.png';
 import googlePlayBadge from '../assets/store-badges/google-play-badge.png';
 import appStoreBadge from '../assets/store-badges/app-store-badge.png';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function Footer() {
+  const { t } = useLanguage();
   return (
     <footer className="relative z-10 border-t border-gray-800/80 bg-gray-950/75 text-gray-300 py-12 backdrop-blur-md">
       <div className="container mx-auto px-4">
@@ -18,13 +20,19 @@ export function Footer() {
               />
               <span className="text-xl font-bold text-white">AlertHawk</span>
             </div>
-            <p className="text-gray-400">
-              Modern monitoring solutions for modern applications.
+            <p className="text-gray-400">{t('footer.description')}</p>
+            <p className="mt-3">
+              <a
+                href="/privacy.html"
+                className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+              >
+                {t('footer.privacy')}
+              </a>
             </p>
           </div>
 
           <div className="relative z-20 md:col-span-2">
-            <h3 className="text-white font-semibold mb-4">Connect</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.connect')}</h3>
             <div className="flex flex-wrap items-center gap-6">
               <a 
                 href="https://docs.alerthawk.net/"
