@@ -1,11 +1,8 @@
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { defineConfig, type Plugin } from 'vite';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
+import { createServer, defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
-import { vitePrerenderPlugin } from 'vite-prerender-plugin';
 import { structuredDataGraph } from './src/seo/structuredData';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function injectStructuredData(): Plugin {
   const jsonLd = JSON.stringify(structuredDataGraph);
@@ -17,16 +14,45 @@ function injectStructuredData(): Plugin {
   };
 }
 
+/**
+ * SSR the app into dist/index.html after the client build.
+ * Uses a minimal Vite server (not vite.config) to avoid plugin recursion and temp dirs.
+ */
+function prerenderHtmlPlugin(): Plugin {
+  let outDir = 'dist';
+
+  return {
+    name: 'prerender-html',
+    apply: 'build',
+    configResolved(config) {
+      outDir = resolve(config.root, config.build.outDir);
+    },
+    async closeBundle() {
+      const server = await createServer({
+        root: process.cwd(),
+        plugins: [react()],
+        logLevel: 'error',
+      });
+
+      try {
+        const { prerender } = await server.ssrLoadModule('/src/prerender.tsx');
+        const { html: appHtml } = await prerender();
+        const indexPath = join(outDir, 'index.html');
+        const doc = readFileSync(indexPath, 'utf-8');
+        writeFileSync(
+          indexPath,
+          doc.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`),
+        );
+      } finally {
+        await server.close();
+      }
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    injectStructuredData(),
-    vitePrerenderPlugin({
-      renderTarget: '#root',
-      prerenderScript: path.resolve(__dirname, 'src/prerender.tsx'),
-    }),
-  ],
+  plugins: [react(), injectStructuredData(), prerenderHtmlPlugin()],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
