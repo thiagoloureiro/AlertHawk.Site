@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:24 AS react-build
+FROM node:26 AS react-build
 WORKDIR /app
 COPY --chown=node:node package.json package-lock.json ./
 USER node
