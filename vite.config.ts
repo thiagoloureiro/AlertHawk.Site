@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { createServer, defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { rewritePrerenderAssetUrls } from './scripts/rewritePrerenderAssetUrls';
 import { structuredDataGraph } from './src/seo/structuredData';
 
 function injectStructuredData(): Plugin {
@@ -36,7 +37,8 @@ function prerenderHtmlPlugin(): Plugin {
 
       try {
         const { prerender } = await server.ssrLoadModule('/src/prerender.tsx');
-        const { html: appHtml } = await prerender();
+        const { html: rawHtml } = await prerender();
+        const appHtml = rewritePrerenderAssetUrls(rawHtml, join(outDir, 'assets'));
         const indexPath = join(outDir, 'index.html');
         const doc = readFileSync(indexPath, 'utf-8');
         writeFileSync(
