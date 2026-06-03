@@ -8,6 +8,7 @@ RUN npm run build
 
 # Stage 2: Production
 FROM node:26 AS runner
+RUN apt-get update && apt-get upgrade -y
 WORKDIR /app
 
 ENV NODE_ENV=production
