@@ -1,14 +1,28 @@
-# Stage 1
-FROM node:26 as react-build
+# Stage 1: Build
+FROM node:26 AS builder
 WORKDIR /app
-COPY . ./
-RUN npm install
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
 RUN npm run build
 
-# Stage 2 - the production environment
-FROM dhi.io/nginx:1
+# Stage 2: Production
+FROM node:26 AS runner
+WORKDIR /app
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=react-build /app/dist /usr/share/nginx/html
+ENV NODE_ENV=production
+ENV PORT=8080
+ENV HOSTNAME=0.0.0.0
+
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
+
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
 EXPOSE 8080
-CMD ["-g", "daemon off;"]
+
+CMD ["node", "server.js"]

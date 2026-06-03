@@ -6,7 +6,6 @@ import {
   CheckCircle, 
   XCircle, 
   Bell, 
-  ArrowRight,
   ArrowDown,
   ChevronRight, 
   Database,
@@ -88,8 +87,9 @@ export function HowItWorks() {
           setCurrentTypingLine(prev => prev + 1);
         }, lineDelay);
       } else {
-        // All lines shown, mark as complete
-        setIsTypingComplete(true);
+        timeoutId = setTimeout(() => {
+          setIsTypingComplete(true);
+        }, lineDelay);
       }
     }
 
@@ -405,8 +405,8 @@ export function HowItWorks() {
 
                 <div className="relative hidden md:block w-20 h-16 flex items-center justify-center">
                   <div className="absolute flex items-center space-x-3 w-full justify-center">
-                    <ChevronRight className="w-4 h-4 text-blue-400 animate-flow-data" title="CPU Metrics" />
-                    <ChevronRight className="w-4 h-4 text-green-400 animate-flow-data-delayed" title="RAM Metrics" />
+                    <ChevronRight className="w-4 h-4 text-blue-400 animate-flow-data" aria-label="CPU Metrics" />
+                    <ChevronRight className="w-4 h-4 text-green-400 animate-flow-data-delayed" aria-label="RAM Metrics" />
                   </div>
                 </div>
 
@@ -421,8 +421,8 @@ export function HowItWorks() {
 
                 <div className="relative hidden md:block w-20 h-16 flex items-center justify-center">
                   <div className="absolute flex items-center space-x-3 w-full justify-center">
-                    <ChevronRight className="w-4 h-4 text-green-400 animate-flow-data" title="CPU Metrics" />
-                    <ChevronRight className="w-4 h-4 text-purple-400 animate-flow-data-delayed" title="RAM Metrics" />
+                    <ChevronRight className="w-4 h-4 text-green-400 animate-flow-data" aria-label="CPU Metrics" />
+                    <ChevronRight className="w-4 h-4 text-purple-400 animate-flow-data-delayed" aria-label="RAM Metrics" />
                   </div>
                 </div>
 
@@ -437,8 +437,8 @@ export function HowItWorks() {
 
                 <div className="relative hidden md:block w-20 h-16 flex items-center justify-center">
                   <div className="absolute flex items-center space-x-3 w-full justify-center">
-                    <ChevronRight className="w-4 h-4 text-purple-400 animate-flow-data" title="CPU Metrics" />
-                    <ChevronRight className="w-4 h-4 text-yellow-400 animate-flow-data-delayed" title="RAM Metrics" />
+                    <ChevronRight className="w-4 h-4 text-purple-400 animate-flow-data" aria-label="CPU Metrics" />
+                    <ChevronRight className="w-4 h-4 text-yellow-400 animate-flow-data-delayed" aria-label="RAM Metrics" />
                   </div>
                 </div>
 

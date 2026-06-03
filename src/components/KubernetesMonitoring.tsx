@@ -3,9 +3,9 @@ import { Server, Cpu, HardDrive, Network } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLanguage } from '../contexts/LanguageContext';
 
-import clusterMetricsImg from '../assets/kubernetes-cluster-metrics.png';
-import applicationMetricsImg from '../assets/kubernetes-application-metrics.png';
-import clustersDiagramImg from '../assets/kubernetes-cluster-diagram.png';
+import clusterMetricsImg from '@/assets/kubernetes-cluster-metrics.png';
+import applicationMetricsImg from '@/assets/kubernetes-application-metrics.png';
+import clustersDiagramImg from '@/assets/kubernetes-cluster-diagram.png';
 
 export function KubernetesMonitoring() {
   const ref = useScrollReveal();
@@ -63,7 +63,7 @@ export function KubernetesMonitoring() {
                   <p className="text-sm text-gray-400">{t('kubernetes.clusterDashboard.subtitle')}</p>
                 </div>
                 <img
-                  src={clusterMetricsImg}
+                  src={clusterMetricsImg.src}
                   alt="Cluster Metrics Dashboard showing CPU and memory usage across nodes"
                   className="w-full h-auto opacity-80"
                 />
@@ -78,7 +78,7 @@ export function KubernetesMonitoring() {
                   <p className="text-sm text-gray-400">{t('kubernetes.applicationDashboard.subtitle')}</p>
                 </div>
                 <img
-                  src={applicationMetricsImg}
+                  src={applicationMetricsImg.src}
                   alt="Application Metrics Dashboard showing pod and container metrics"
                   className="w-full h-auto opacity-80"
                 />
@@ -93,7 +93,7 @@ export function KubernetesMonitoring() {
                   <p className="text-sm text-gray-400">{t('kubernetes.clustersDiagram.subtitle')}</p>
                 </div>
                 <img
-                  src={clustersDiagramImg}
+                  src={clustersDiagramImg.src}
                   alt="Clusters Diagram showing cluster overview and status"
                   className="w-full h-auto opacity-80"
                 />

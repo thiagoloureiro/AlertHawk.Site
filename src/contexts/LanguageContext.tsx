@@ -1,4 +1,6 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+'use client';
+
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { translations } from '../translations';
 
 type Language = 'en' | 'pt' | 'it' | 'es' | 'pl' | 'de';
@@ -11,26 +13,26 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+function getInitialLanguage(): Language {
+  if (typeof window === 'undefined') {
+    return 'en';
+  }
+
+  const savedLanguage = localStorage.getItem('alerthawk-language') as Language;
+  if (savedLanguage && translations[savedLanguage]) {
+    return savedLanguage;
+  }
+
+  const browserLang = navigator.language.split('-')[0] as Language;
+  if (translations[browserLang]) {
+    return browserLang;
+  }
+
+  return 'en';
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('en');
-
-  useEffect(() => {
-    // Check localStorage first
-    const savedLanguage = localStorage.getItem('alerthawk-language') as Language;
-    if (savedLanguage && translations[savedLanguage]) {
-      setLanguageState(savedLanguage);
-      return;
-    }
-
-    // Detect browser language
-    const browserLang = navigator.language.split('-')[0] as Language;
-    if (translations[browserLang]) {
-      setLanguageState(browserLang);
-    } else {
-      // Fallback to English
-      setLanguageState('en');
-    }
-  }, []);
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
@@ -39,13 +41,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = (key: string): string => {
     const keys = key.split('.');
-    let value: any = translations[language];
-    
+    let value: unknown = translations[language];
+
     for (const k of keys) {
-      value = value?.[k];
+      if (value && typeof value === 'object' && k in value) {
+        value = (value as Record<string, unknown>)[k];
+      } else {
+        value = undefined;
+      }
     }
-    
-    return value || key;
+
+    return typeof value === 'string' ? value : key;
   };
 
   return (

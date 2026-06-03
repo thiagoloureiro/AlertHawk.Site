@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logoImage from '../assets/logo.png';
+import logoImage from '@/assets/logo.png';
 import { LanguageSelector } from './LanguageSelector';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -38,7 +38,7 @@ export function Header() {
             className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity z-10"
           >
             <img 
-              src={logoImage} 
+              src={logoImage.src} 
               alt="AlertHawk Logo" 
               className="w-10 h-10 md:w-12 md:h-12 opacity-80"
             />

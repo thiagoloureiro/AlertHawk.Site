@@ -126,10 +126,10 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-gray-900 text-gray-100 antialiased relative;
-    background-image: 
+    background-image:
       radial-gradient(circle at 25% 15%, rgba(111, 76, 255, 0.04) 0%, transparent 40%),
       radial-gradient(circle at 75% 85%, rgba(111, 76, 255, 0.04) 0%, transparent 40%);
   }

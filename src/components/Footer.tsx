@@ -1,8 +1,8 @@
 import { BookOpen } from 'lucide-react';
 import { Github, Linkedin } from './icons/BrandIcons';
-import logoImage from '../assets/logo.png';
-import googlePlayBadge from '../assets/store-badges/google-play-badge.png';
-import appStoreBadge from '../assets/store-badges/app-store-badge.png';
+import logoImage from '@/assets/logo.png';
+import googlePlayBadge from '@/assets/store-badges/google-play-badge.png';
+import appStoreBadge from '@/assets/store-badges/app-store-badge.png';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function Footer() {
@@ -14,7 +14,7 @@ export function Footer() {
           <div className="relative z-20">
             <div className="flex items-center space-x-2 mb-4">
               <img 
-                src={logoImage}
+                src={logoImage.src}
                 alt="AlertHawk Logo" 
                 className="w-8 h-8 opacity-80"
               />
@@ -23,7 +23,7 @@ export function Footer() {
             <p className="text-gray-400">{t('footer.description')}</p>
             <p className="mt-3">
               <a
-                href="/privacy.html"
+                href="/privacy"
                 className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
               >
                 {t('footer.privacy')}
@@ -69,7 +69,7 @@ export function Footer() {
                 className="transition-opacity hover:opacity-100"
               >
                 <img 
-                  src={appStoreBadge} 
+                  src={appStoreBadge.src} 
                   alt="Download on the App Store" 
                   className="h-12 opacity-80"
                 />
@@ -81,7 +81,7 @@ export function Footer() {
                 className="transition-opacity hover:opacity-100"
               >
                 <img 
-                  src={googlePlayBadge} 
+                  src={googlePlayBadge.src} 
                   alt="Get it on Google Play" 
                   className="h-12 opacity-80"
                 />

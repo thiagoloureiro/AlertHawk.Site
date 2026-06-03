@@ -13,3 +13,13 @@ bower_components
 psd
 thumb
 sketch
+
+# Next.js
+.next
+out
+
+# Legacy Vite output
+dist
+
+# Local npm cache (used when global cache has permission issues)
+.npm-cache

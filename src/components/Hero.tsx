@@ -1,10 +1,10 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import appImage from '../assets/app.png';
-import mobile1 from '../assets/mobile1.png';
-import mobile2 from '../assets/mobile2.png';
-import mobile3 from '../assets/mobile3.png';
 import { useLanguage } from '../contexts/LanguageContext';
+import appImage from '@/assets/app.png';
+import mobile1 from '@/assets/mobile1.png';
+import mobile2 from '@/assets/mobile2.png';
+import mobile3 from '@/assets/mobile3.png';
 
 export function Hero() {
   const { t } = useLanguage();
@@ -54,7 +54,7 @@ export function Hero() {
         <div className="mt-16 fade-up" style={{ transitionDelay: '200ms' }}>
           <div className="glass-card p-1 rounded-xl">
             <img
-              src={appImage}
+              src={appImage.src}
               alt="Dashboard Preview"
               className="rounded-lg opacity-80"
             />
@@ -65,21 +65,21 @@ export function Hero() {
           <div className="flex flex-col md:flex-row justify-center items-center gap-8">
             <div className="glass-card p-1 rounded-xl w-64">
               <img
-                src={mobile1}
+                src={mobile1.src}
                 alt="Mobile App Screenshot 1"
                 className="rounded-lg w-full opacity-80"
               />
             </div>
             <div className="glass-card p-1 rounded-xl w-64">
               <img
-                src={mobile2}
+                src={mobile2.src}
                 alt="Mobile App Screenshot 2"
                 className="rounded-lg w-full opacity-80"
               />
             </div>
             <div className="glass-card p-1 rounded-xl w-64">
               <img
-                src={mobile3}
+                src={mobile3.src}
                 alt="Mobile App Screenshot 3"
                 className="rounded-lg w-full opacity-80"
               />

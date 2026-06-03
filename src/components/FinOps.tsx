@@ -55,7 +55,7 @@ export function FinOps() {
                   <h3 className="text-xl font-semibold text-white mb-1">{t('finops.screens.overview.title')}</h3>
                   <p className="text-sm text-gray-400">{t('finops.screens.overview.subtitle')}</p>
                 </div>
-                <img src={finopsOverviewImg} alt="FinOps overview dashboard" className="w-full h-auto opacity-80" />
+                <img src={finopsOverviewImg.src} alt="FinOps overview dashboard" className="w-full h-auto opacity-80" />
               </div>
             </div>
 
@@ -66,7 +66,7 @@ export function FinOps() {
                     <h3 className="text-xl font-semibold text-white mb-1">{t('finops.screens.historical.title')}</h3>
                     <p className="text-sm text-gray-400">{t('finops.screens.historical.subtitle')}</p>
                   </div>
-                  <img src={finopsHistoricalImg} alt="FinOps historical results charts" className="w-full h-auto opacity-80" />
+                  <img src={finopsHistoricalImg.src} alt="FinOps historical results charts" className="w-full h-auto opacity-80" />
                 </div>
               </div>
 
@@ -76,7 +76,7 @@ export function FinOps() {
                     <h3 className="text-xl font-semibold text-white mb-1">{t('finops.screens.costDetails.title')}</h3>
                     <p className="text-sm text-gray-400">{t('finops.screens.costDetails.subtitle')}</p>
                   </div>
-                  <img src={finopsCostDetailsImg} alt="FinOps cost details breakdown" className="w-full h-auto opacity-80" />
+                  <img src={finopsCostDetailsImg.src} alt="FinOps cost details breakdown" className="w-full h-auto opacity-80" />
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ export function FinOps() {
                   <p className="text-sm text-gray-400">{t('finops.screens.aiRecommendations.subtitle')}</p>
                 </div>
                 <img
-                  src={finopsAiRecommendationsImg}
+                  src={finopsAiRecommendationsImg.src}
                   alt="AI recommendations for cloud cost optimization"
                   className="w-full h-auto opacity-80"
                 />

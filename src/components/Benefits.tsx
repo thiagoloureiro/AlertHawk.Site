@@ -1,5 +1,5 @@
 import React from 'react';
-import { Server, Activity, Bell, Scale, Smartphone, Zap, Shield, BarChart3 } from 'lucide-react';
+import { Server, Activity, Bell, Scale, Zap, BarChart3 } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLanguage } from '../contexts/LanguageContext';
 
