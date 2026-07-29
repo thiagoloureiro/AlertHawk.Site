@@ -6,9 +6,9 @@ export function GET() {
   const signalLine = `Content-Signal: ai-train=${contentSignals['ai-train']}, search=${contentSignals.search}, ai-input=${contentSignals['ai-input']}`;
 
   const body = [
-    'User-agent: *',
-    'Allow: /',
+    'User-Agent: *',
     signalLine,
+    'Allow: /',
     '',
     `Sitemap: ${siteUrl}/sitemap.xml`,
     '',
