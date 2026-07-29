@@ -9,6 +9,7 @@ import {
 } from '@/lib/site';
 import './globals.css';
 import { TawkChat } from '@/components/TawkChat';
+import { WebMcpProvider } from '@/components/WebMcpProvider';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -81,6 +82,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <WebMcpProvider />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-V7T7BBR9ZE"
           strategy="afterInteractive"
