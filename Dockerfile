@@ -1,5 +1,5 @@
 # Stage 1: Build
-FROM node:24 AS builder
+FROM node:26 AS builder
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Production
-FROM dhi.io/node:24 AS runner
+FROM dhi.io/node:26 AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
