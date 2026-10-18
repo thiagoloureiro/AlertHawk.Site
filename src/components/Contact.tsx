@@ -1,8 +1,9 @@
 import React from 'react';
-import { MessageCircle, Globe } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { Github } from './icons/BrandIcons';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLanguage } from '../contexts/LanguageContext';
+import { SectionHeading } from './SectionHeading';
 
 export function Contact() {
   const ref = useScrollReveal();
@@ -11,17 +12,12 @@ export function Contact() {
   return (
     <section ref={ref} id="contact" className="py-20 relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 fade-up">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-700/20 mb-6">
-            <MessageCircle className="w-8 h-8 text-blue-500" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            {t('contact.title')}
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {t('contact.subtitle')}
-          </p>
-        </div>
+        <SectionHeading
+          index="09"
+          eyebrow={t('sections.contact')}
+          title={t('contact.title')}
+          subtitle={t('contact.subtitle')}
+        />
 
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6">

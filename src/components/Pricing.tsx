@@ -1,8 +1,9 @@
 import React from 'react';
-import { Check, Zap, Shield } from 'lucide-react';
+import { Check, Shield } from 'lucide-react';
 import { Github } from './icons/BrandIcons';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLanguage } from '../contexts/LanguageContext';
+import { SectionHeading } from './SectionHeading';
 
 export function Pricing() {
   const ref = useScrollReveal();
@@ -11,17 +12,12 @@ export function Pricing() {
   return (
     <section ref={ref} id="pricing" className="py-20 relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 fade-up">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-700/20 mb-6">
-            <Zap className="w-8 h-8 text-green-500" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            {t('pricing.title')}
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {t('pricing.subtitle')}
-          </p>
-        </div>
+        <SectionHeading
+          index="08"
+          eyebrow={t('sections.pricing')}
+          title={t('pricing.title')}
+          subtitle={t('pricing.subtitle')}
+        />
 
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-center">
@@ -83,22 +79,22 @@ export function Pricing() {
               </div>
 
               <div className="flex flex-col gap-3">
-                <a 
-                  href="https://github.com/thiagoloureiro/AlertHawk" 
+                <a
+                  href="https://github.com/thiagoloureiro/AlertHawk"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors border border-gray-700"
+                  className="btn-secondary justify-center"
                 >
-                  <Github className="w-5 h-5 mr-2" />
+                  <Github className="mr-2 h-4 w-4" />
                   {t('pricing.openSource.viewGitHub')}
                 </a>
-                <a 
-                  href="https://artifacthub.io/packages/helm/alerthawk/alerthawk" 
+                <a
+                  href="https://artifacthub.io/packages/helm/alerthawk/alerthawk"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-800 transition-colors"
+                  className="btn-primary justify-center"
                 >
-                  <Shield className="w-5 h-5 mr-2" />
+                  <Shield className="mr-2 h-4 w-4" />
                   {t('pricing.openSource.deployHelm')}
                 </a>
               </div>

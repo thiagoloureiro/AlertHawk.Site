@@ -1,6 +1,28 @@
 export const it = {
   nav: { home: 'Home', howItWorks: 'Come Funziona', pricing: 'Prezzi', contact: 'Contatti', docs: 'Documentazione' },
+  sections: {
+    home: 'Home',
+    howItWorks: 'Come Funziona',
+    kubernetes: 'Kubernetes',
+    finops: 'FinOps',
+    features: 'Funzionalità',
+    benefits: 'Vantaggi',
+    technology: 'Tecnologia',
+    pricing: 'Prezzi',
+    contact: 'Contatti',
+  },
+  rail: {
+    home: 'Home',
+    howItWorks: 'Wrks',
+    kubernetes: 'K8s',
+    finops: 'FinOps',
+    features: 'Feats',
+    pricing: 'Prezzo',
+    contact: 'Talk',
+  },
   hero: {
+    brand: 'AlertHawk',
+    eyebrow: 'Monitoraggio',
     title: 'Monitoraggio Enterprise per Kubernetes e Infrastruttura',
     subtitle: 'Metriche Kubernetes in tempo reale, monitoraggio uptime, alerting intelligente e notifiche istantanee. Progettato per team DevOps che necessitano di visibilità completa della loro infrastruttura.',
     viewHelmChart: 'Visualizza Helm Chart',

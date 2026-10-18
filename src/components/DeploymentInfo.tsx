@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, ArrowRight, Code, Database, Network, Shield } from 'lucide-react';
+import { Container, ArrowRight, Database, Network, Shield } from 'lucide-react';
 import { Github } from './icons/BrandIcons';
 import { useLanguage } from '../contexts/LanguageContext';
+import { SectionHeading } from './SectionHeading';
 
 export function DeploymentInfo() {
   const { t } = useLanguage();
@@ -11,94 +12,85 @@ export function DeploymentInfo() {
       icon: Container,
       title: t('technology.kubernetes.title'),
       description: t('technology.kubernetes.description'),
-      iconClass: 'text-blue-500'
+      iconClass: 'text-blue-400',
     },
     {
       icon: Database,
       title: t('technology.database.title'),
       description: t('technology.database.description'),
-      iconClass: 'text-purple-500'
+      iconClass: 'text-blue-400',
     },
     {
       icon: Network,
       title: t('technology.processing.title'),
       description: t('technology.processing.description'),
-      iconClass: 'text-green-500'
+      iconClass: 'text-blue-400',
     },
     {
       icon: Shield,
       title: t('technology.security.title'),
       description: t('technology.security.description'),
-      iconClass: 'text-yellow-500'
-    }
+      iconClass: 'text-blue-400',
+    },
   ];
   return (
-    <section className="py-20 relative">
+    <section id="technology" className="py-20 relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 fade-up">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-700/20 mb-6">
-            <Code className="w-8 h-8 text-purple-500" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            {t('technology.title')}
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {t('technology.subtitle')}
-          </p>
-        </div>
+        <SectionHeading
+          index="07"
+          eyebrow={t('sections.technology')}
+          title={t('technology.title')}
+          subtitle={t('technology.subtitle')}
+        />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="mb-12 grid border-t border-gray-800 md:grid-cols-2 lg:grid-cols-4">
           {technologies.map((tech, index) => (
-            <div 
+            <div
               key={index}
-              className="glass-card p-6 rounded-xl hover:border-purple-500/50 transition-all duration-300 fade-up"
+              className="fade-up border-b border-gray-800 p-6 lg:border-r lg:last:border-r-0 lg:[&:nth-child(4n)]:border-r-0 md:[&:nth-child(2n)]:border-r-0 md:odd:border-r"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <tech.icon className={`w-10 h-10 ${tech.iconClass} mb-4`} />
-              <h3 className="text-lg font-semibold mb-2 text-white">{tech.title}</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">{tech.description}</p>
+              <tech.icon className={`mb-4 h-8 w-8 ${tech.iconClass}`} />
+              <h3 className="mb-2 text-lg font-semibold text-white">{tech.title}</h3>
+              <p className="text-sm leading-relaxed text-gray-400">{tech.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="glass-card p-6 rounded-xl fade-up" style={{ transitionDelay: '400ms' }}>
+        <div className="grid gap-0 border border-gray-800 md:grid-cols-2">
+          <div className="fade-up border-b border-gray-800 p-6 md:border-r md:border-b-0 md:p-8" style={{ transitionDelay: '400ms' }}>
             <div className="flex items-start space-x-4">
-              <Container className="w-8 h-8 text-blue-500 shrink-0" />
+              <Container className="h-8 w-8 shrink-0 text-blue-400" />
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">{t('technology.deployment.title')}</h3>
-                <p className="text-gray-300 mb-4">
-                  {t('technology.deployment.description')}
-                </p>
-                <a 
-                  href="https://artifacthub.io/packages/helm/alerthawk/alerthawk" 
-                  target="_blank" 
+                <h3 className="mb-2 text-xl font-semibold text-white">{t('technology.deployment.title')}</h3>
+                <p className="mb-4 text-gray-400">{t('technology.deployment.description')}</p>
+                <a
+                  href="https://artifacthub.io/packages/helm/alerthawk/alerthawk"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center"
+                  className="inline-flex items-center text-blue-400 transition-colors hover:text-blue-300"
                 >
                   {t('technology.deployment.viewHelmChart')}
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                  <ArrowRight className="ml-1 h-4 w-4" />
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="glass-card p-6 rounded-xl fade-up" style={{ transitionDelay: '500ms' }}>
+          <div className="fade-up p-6 md:p-8" style={{ transitionDelay: '500ms' }}>
             <div className="flex items-start space-x-4">
-              <Github className="w-8 h-8 text-purple-500 shrink-0" />
+              <Github className="h-8 w-8 shrink-0 text-blue-400" />
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">{t('technology.openSource.title')}</h3>
-                <p className="text-gray-300 mb-4">
-                  {t('technology.openSource.description')}
-                </p>
-                <a 
-                  href="https://github.com/thiagoloureiro/AlertHawk" 
-                  target="_blank" 
+                <h3 className="mb-2 text-xl font-semibold text-white">{t('technology.openSource.title')}</h3>
+                <p className="mb-4 text-gray-400">{t('technology.openSource.description')}</p>
+                <a
+                  href="https://github.com/thiagoloureiro/AlertHawk"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center"
+                  className="inline-flex items-center text-blue-400 transition-colors hover:text-blue-300"
                 >
                   {t('technology.openSource.viewGitHub')}
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                  <ArrowRight className="ml-1 h-4 w-4" />
                 </a>
               </div>
             </div>

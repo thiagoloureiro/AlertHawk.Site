@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLanguage } from '../contexts/LanguageContext';
+import { SectionHeading } from './SectionHeading';
 
 export function HowItWorks() {
   const ref = useScrollReveal();
@@ -110,17 +111,12 @@ export function HowItWorks() {
   return (
     <section ref={ref} id="how-it-works" className="py-20 relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 fade-up">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-700/20 mb-6">
-            <Zap className="w-8 h-8 text-blue-500" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            {t('howItWorks.title')}
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {t('howItWorks.subtitle')}
-          </p>
-        </div>
+        <SectionHeading
+          index="02"
+          eyebrow={t('sections.howItWorks')}
+          title={t('howItWorks.title')}
+          subtitle={t('howItWorks.subtitle')}
+        />
 
         {/* Website Monitoring Section */}
         <div className="mb-20 fade-up" style={{ transitionDelay: '100ms' }}>

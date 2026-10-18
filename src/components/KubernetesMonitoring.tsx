@@ -1,7 +1,8 @@
 import React from 'react';
-import { Server, Cpu, HardDrive, Network } from 'lucide-react';
+import { Cpu, HardDrive, Network } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLanguage } from '../contexts/LanguageContext';
+import { SectionHeading } from './SectionHeading';
 
 import clusterMetricsImg from '@/assets/kubernetes-cluster-metrics.png';
 import applicationMetricsImg from '@/assets/kubernetes-application-metrics.png';
@@ -15,18 +16,12 @@ export function KubernetesMonitoring() {
     <section ref={ref} id="kubernetes-monitoring" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16 fade-up">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-700/20 mb-6">
-              <Server className="w-8 h-8 text-purple-500" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              {t('kubernetes.title')}
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              {t('kubernetes.subtitle')}
-            </p>
-          </div>
+          <SectionHeading
+            index="03"
+            eyebrow={t('sections.kubernetes')}
+            title={t('kubernetes.title')}
+            subtitle={t('kubernetes.subtitle')}
+          />
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-16">

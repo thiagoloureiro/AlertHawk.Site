@@ -25,29 +25,29 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-gray-900/80 backdrop-blur-lg z-50 border-b border-gray-800">
+    <header className="fixed top-0 right-0 left-0 z-50 border-b border-gray-800/80 bg-gray-900/70 backdrop-blur-md lg:right-[100px]">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo - Left */}
-          <a 
-            href="#home" 
+          <a
+            href="#home"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection('home');
             }}
-            className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity z-10"
+            className="z-10 flex cursor-pointer items-center space-x-2 transition-opacity hover:opacity-80"
           >
-            <img 
-              src={logoImage.src} 
-              alt="AlertHawk Logo" 
-              className="w-10 h-10 md:w-12 md:h-12 opacity-80"
+            <img
+              src={logoImage.src}
+              alt="AlertHawk Logo"
+              className="h-9 w-9 opacity-90 md:h-10 md:w-10"
             />
-            <span className="text-xl md:text-2xl font-bold text-white tracking-tight">AlertHawk</span>
+            <span className="text-lg font-bold tracking-tight text-white md:text-xl">
+              AlertHawk
+            </span>
           </a>
-          
-          {/* Desktop Menu - Center */}
-          <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2">
-            <div className="flex items-center space-x-1 bg-gray-800/50 backdrop-blur-sm px-2 py-2 rounded-lg border border-gray-700/50">
+
+          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center md:flex">
+            <div className="flex items-center gap-1">
               {navLinks.map((link) =>
                 'external' in link && link.external && link.href ? (
                   <a
@@ -55,7 +55,7 @@ export function Header() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-md transition-all duration-200 cursor-pointer"
+                    className="cursor-pointer px-3 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-gray-400 transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -67,39 +67,32 @@ export function Header() {
                       e.preventDefault();
                       scrollToSection(link.id);
                     }}
-                    className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-md transition-all duration-200 cursor-pointer"
+                    className="cursor-pointer px-3 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-gray-400 transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>
-                )
+                ),
               )}
             </div>
           </div>
 
-          {/* Right side - Language Selector and Mobile Menu */}
-          <div className="flex items-center space-x-4 z-10">
+          <div className="z-10 flex items-center space-x-4">
             <LanguageSelector />
-            
-            {/* Mobile Menu Button */}
+
             <button
-              className="md:hidden text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 transition-colors hover:text-white md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-gray-800 bg-gray-900/95 backdrop-blur-lg">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <div className="border-t border-gray-800 bg-gray-900/95 backdrop-blur-lg md:hidden">
+          <div className="container mx-auto flex flex-col space-y-1 px-4 py-4">
             {navLinks.map((link) =>
               'external' in link && link.external && link.href ? (
                 <a
@@ -107,7 +100,7 @@ export function Header() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors cursor-pointer py-2"
+                  className="cursor-pointer py-2 font-mono text-xs uppercase tracking-[0.14em] text-gray-300 transition-colors hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -119,11 +112,11 @@ export function Header() {
                     e.preventDefault();
                     scrollToSection(link.id);
                   }}
-                  className="text-gray-300 hover:text-white transition-colors cursor-pointer py-2"
+                  className="cursor-pointer py-2 font-mono text-xs uppercase tracking-[0.14em] text-gray-300 transition-colors hover:text-white"
                 >
                   {link.label}
                 </a>
-              )
+              ),
             )}
           </div>
         </div>
