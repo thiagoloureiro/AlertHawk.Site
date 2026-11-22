@@ -5,8 +5,10 @@ import { docsUrl } from '@/lib/agent-discovery/config';
 
 const SECTIONS = [
   { id: 'home', label: 'Home' },
-  { id: 'how-it-works', label: 'How it Works' },
-  { id: 'kubernetes-monitoring', label: 'Kubernetes Monitoring' },
+  { id: 'advantages', label: 'Advantages' },
+  { id: 'capabilities', label: 'Capabilities' },
+  { id: 'proof', label: 'Product' },
+  { id: 'deploy', label: 'Deploy' },
   { id: 'pricing', label: 'Pricing' },
   { id: 'contact', label: 'Contact' },
 ] as const;

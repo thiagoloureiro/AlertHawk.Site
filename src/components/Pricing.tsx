@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Check, Shield } from 'lucide-react';
 import { Github } from './icons/BrandIcons';
@@ -9,96 +11,93 @@ export function Pricing() {
   const ref = useScrollReveal();
   const { t } = useLanguage();
 
+  const points = [
+    {
+      title: t('pricing.openSource.unlimited.title'),
+      description: t('pricing.openSource.unlimited.description'),
+    },
+    {
+      title: t('pricing.openSource.sourceCode.title'),
+      description: t('pricing.openSource.sourceCode.description'),
+    },
+    {
+      title: t('pricing.openSource.selfHosted.title'),
+      description: t('pricing.openSource.selfHosted.description'),
+    },
+    {
+      title: t('pricing.openSource.allFeatures.title'),
+      description: t('pricing.openSource.allFeatures.description'),
+    },
+    {
+      title: t('pricing.openSource.community.title'),
+      description: t('pricing.openSource.community.description'),
+    },
+  ];
+
   return (
-    <section ref={ref} id="pricing" className="py-20 relative">
+    <section ref={ref} id="pricing" className="relative py-20">
       <div className="container mx-auto px-4">
         <SectionHeading
-          index="08"
+          index="06"
           eyebrow={t('sections.pricing')}
           title={t('pricing.title')}
           subtitle={t('pricing.subtitle')}
         />
 
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-center">
-            {/* Open Source Plan */}
-            <div className="glass-card p-8 md:p-10 rounded-2xl fade-up max-w-2xl w-full" style={{ transitionDelay: '100ms' }}>
-              <div className="flex items-center justify-center mb-6">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-700/20 border border-green-700/50">
-                  <Github className="w-5 h-5 text-green-500 mr-2" />
-                  <span className="text-green-400 font-semibold">{t('pricing.openSource.badge')}</span>
-                </div>
-              </div>
-
-              <div className="text-center mb-8">
-                <div className="flex items-baseline justify-center mb-4">
-                  <span className="text-5xl md:text-6xl font-bold text-white">{t('pricing.openSource.price')}</span>
-                  <span className="text-xl text-gray-400 ml-2">{t('pricing.openSource.period')}</span>
-                </div>
-                <p className="text-lg text-gray-300 mb-8">
-                  {t('pricing.openSource.description')}
-                </p>
-              </div>
-
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-base font-semibold text-white mb-1">{t('pricing.openSource.unlimited.title')}</h3>
-                    <p className="text-gray-300 text-sm">{t('pricing.openSource.unlimited.description')}</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-base font-semibold text-white mb-1">{t('pricing.openSource.sourceCode.title')}</h3>
-                    <p className="text-gray-300 text-sm">{t('pricing.openSource.sourceCode.description')}</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-base font-semibold text-white mb-1">{t('pricing.openSource.selfHosted.title')}</h3>
-                    <p className="text-gray-300 text-sm">{t('pricing.openSource.selfHosted.description')}</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-base font-semibold text-white mb-1">{t('pricing.openSource.allFeatures.title')}</h3>
-                    <p className="text-gray-300 text-sm">{t('pricing.openSource.allFeatures.description')}</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-base font-semibold text-white mb-1">{t('pricing.openSource.community.title')}</h3>
-                    <p className="text-gray-300 text-sm">{t('pricing.openSource.community.description')}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <a
-                  href="https://github.com/thiagoloureiro/AlertHawk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary justify-center"
-                >
-                  <Github className="mr-2 h-4 w-4" />
-                  {t('pricing.openSource.viewGitHub')}
-                </a>
-                <a
-                  href="https://artifacthub.io/packages/helm/alerthawk/alerthawk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary justify-center"
-                >
-                  <Shield className="mr-2 h-4 w-4" />
-                  {t('pricing.openSource.deployHelm')}
-                </a>
-              </div>
+        <div className="mx-auto max-w-2xl fade-up border border-gray-800 p-8 md:p-10">
+          <div className="mb-8 text-center">
+            <p className="mb-4 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-blue-400">
+              <Github className="h-4 w-4" />
+              {t('pricing.openSource.badge')}
+            </p>
+            <div className="mb-4 flex items-baseline justify-center">
+              <span className="text-5xl font-bold text-white md:text-6xl">
+                {t('pricing.openSource.price')}
+              </span>
+              <span className="ml-2 text-lg text-gray-400">{t('pricing.openSource.period')}</span>
             </div>
+            <p className="text-gray-400">{t('pricing.openSource.description')}</p>
+          </div>
+
+          <div className="mb-8 space-y-4 border-t border-gray-800 pt-6">
+            {points.map((point) => (
+              <div key={point.title} className="flex items-start gap-3">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-blue-400" />
+                <div>
+                  <h3 className="text-base font-semibold text-white">{point.title}</h3>
+                  <p className="text-sm text-gray-400">{point.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <a
+              href="https://app.alerthawk.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary justify-center"
+            >
+              {t('hero.tryDemo')}
+            </a>
+            <a
+              href="https://artifacthub.io/packages/helm/alerthawk/alerthawk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary justify-center"
+            >
+              <Shield className="mr-2 h-4 w-4" />
+              {t('pricing.openSource.deployHelm')}
+            </a>
+            <a
+              href="https://github.com/thiagoloureiro/AlertHawk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center py-2 text-sm text-gray-400 transition-colors hover:text-white"
+            >
+              <Github className="mr-2 h-4 w-4" />
+              {t('pricing.openSource.viewGitHub')}
+            </a>
           </div>
         </div>
       </div>

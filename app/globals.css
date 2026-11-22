@@ -26,10 +26,6 @@
   @apply bg-gray-800/50 backdrop-blur-lg border border-gray-700/50 relative z-10;
 }
 
-@utility btn-purple {
-  @apply inline-flex items-center bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-800 transition-colors;
-}
-
 @utility fade-up {
   opacity: 0;
   transform: translateY(20px);
@@ -107,17 +103,17 @@
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(111, 76, 255, 0.12),
-      transparent 40%
+      rgba(59, 130, 246, 0.1),
+      transparent 42%
     ),
     radial-gradient(
       circle at 0% 50%,
-      rgba(111, 76, 255, 0.12),
+      rgba(59, 130, 246, 0.06),
       transparent 40%
     ),
     radial-gradient(
       circle at 100% 50%,
-      rgba(111, 76, 255, 0.12),
+      rgba(14, 165, 233, 0.05),
       transparent 40%
     );
 }

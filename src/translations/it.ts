@@ -1,160 +1,237 @@
 export const it = {
-  nav: { home: 'Home', howItWorks: 'Come Funziona', pricing: 'Prezzi', contact: 'Contatti', docs: 'Documentazione' },
+  nav: {
+    home: 'Home',
+    advantages: 'Vantaggi',
+    capabilities: 'Capacità',
+    deploy: 'Deploy',
+    pricing: 'Prezzi',
+    contact: 'Contatti',
+    docs: 'Docs',
+  },
   sections: {
     home: 'Home',
-    howItWorks: 'Come Funziona',
-    kubernetes: 'Kubernetes',
-    finops: 'FinOps',
-    features: 'Funzionalità',
-    benefits: 'Vantaggi',
-    technology: 'Tecnologia',
+    advantages: 'Vantaggi',
+    capabilities: 'Capacità',
+    proof: 'Prodotto',
+    deploy: 'Deploy',
     pricing: 'Prezzi',
     contact: 'Contatti',
   },
   rail: {
     home: 'Home',
-    howItWorks: 'Wrks',
-    kubernetes: 'K8s',
-    finops: 'FinOps',
-    features: 'Feats',
+    advantages: 'Perché',
+    capabilities: 'Caps',
+    proof: 'Proof',
+    deploy: 'Deploy',
     pricing: 'Prezzo',
-    contact: 'Talk',
+    contact: 'Contatti',
   },
   hero: {
     brand: 'AlertHawk',
-    eyebrow: 'Monitoraggio',
-    title: 'Monitoraggio Enterprise per Kubernetes e Infrastruttura',
-    subtitle: 'Metriche Kubernetes in tempo reale, monitoraggio uptime, alerting intelligente e notifiche istantanee. Progettato per team DevOps che necessitano di visibilità completa della loro infrastruttura.',
-    viewHelmChart: 'Visualizza Helm Chart',
-    goToAlertHawk: 'Vai ad AlertHawk',
-  },
-  kubernetes: {
-    title: 'Monitoraggio Infrastruttura Kubernetes',
-    subtitle: 'Visibilità approfondita nella tua infrastruttura Kubernetes con metriche CPU e RAM in tempo reale, monitoraggio dello stato del cluster e tracciamento dell\'utilizzo delle risorse su nodi, pod e namespace.',
-    clusterMetrics: { title: 'Metriche a Livello Cluster', description: 'Monitoraggio CPU e memoria in tempo reale su tutti i nodi del cluster. Traccia allocazione risorse, tendenze di utilizzo e metriche di pianificazione della capacità.' },
-    podMetrics: { title: 'Metriche Pod e Container', description: 'Tracciamento granulare di CPU e RAM a livello di pod e container. Monitora il consumo di risorse per namespace con dettagli e dati storici.' },
-    multiCluster: { title: 'Gestione Multi-Cluster', description: 'Vista centralizzata di tutti i cluster Kubernetes. Monitora lo stato del cluster, lo stato delle risorse e le metriche delle prestazioni su tutta l\'infrastruttura.' },
-    clusterDashboard: { title: 'Dashboard Metriche Cluster', subtitle: 'Monitora l\'utilizzo di CPU e memoria dei nodi nel cluster' },
-    applicationDashboard: { title: 'Dashboard Metriche Applicazione', subtitle: 'Monitora l\'utilizzo di CPU e memoria di pod e container nei namespace' },
-    clustersDiagram: { title: 'Diagramma Cluster', subtitle: 'Vista di supervisione di tutti i cluster e il loro stato' },
-  },
-  finops: {
-    title: 'FinOps per Azure Cloud',
+    eyebrow: 'Monitoring self-hosted',
+    title: 'Monitora API, siti, server e Kubernetes — sulla tua infrastruttura',
     subtitle:
-      'Recupera metriche di costo e utilizzo da Azure, esplora grafici dettagliati e usa l’analisi AI per individuare opportunità di ottimizzazione sulle risorse cloud.',
-    azureMetrics: {
-      title: 'Metriche da Azure',
-      description:
-        'Collega la tua sottoscrizione Azure e recupera segnali di costo e utilizzo per sottoscrizioni, resource group e servizi.',
+      'Uptime, metriche CPU/RAM Kubernetes, alert multi-canale e FinOps Azure in una piattaforma open source.',
+    tryDemo: 'Prova la demo',
+    deployHelm: 'Deploy con Helm',
+  },
+  advantages: {
+    title: 'Perché AlertHawk',
+    subtitle:
+      'Vantaggi chiari per team che vogliono monitoring di proprietà — senza lock-in SaaS.',
+    steps: {
+      title: 'Come funziona',
+      monitor: {
+        title: 'Monitora',
+        description: 'HTTP, TCP e salute Kubernetes agli intervalli che configuri.',
+      },
+      alert: {
+        title: 'Avvisa',
+        description: 'Notifica Slack, Teams, Telegram, email, webhook o push mobile.',
+      },
+      act: {
+        title: 'Agisci',
+        description: 'Controlla uptime, tempi di risposta e metriche su web o mobile.',
+      },
     },
-    detailedGraphs: {
-      title: 'Grafici e Dettagli',
-      description:
-        'Comprendi la spesa e i trend con grafici, confronti tra periodi e breakdown per tipo di servizio e resource group.',
-    },
-    aiAnalysis: {
-      title: 'Analisi AI',
-      description:
-        'Insight e raccomandazioni AI per evidenziare sprechi, sotto-utilizzo e azioni di right-sizing sulle risorse cloud.',
-    },
-    screens: {
-      overview: { title: 'Panoramica', subtitle: 'Costo MTD, risorse analizzate e sottoscrizioni in un’unica vista' },
-      historical: { title: 'Risultati Storici', subtitle: 'Trend di costo giornalieri/mensili nel tempo' },
-      costDetails: { title: 'Dettagli Costi', subtitle: 'Breakdown per resource group e tipo di servizio' },
-      aiRecommendations: { title: 'Raccomandazioni AI', subtitle: 'Suggerimenti di risparmio prioritizzati con executive summary' },
+    items: {
+      selfHosted: {
+        title: 'Self-hosted, i tuoi dati',
+        description:
+          'Esegui su cluster o VM. Controllo totale di dati, retention e accessi — licenza MIT.',
+      },
+      kubernetes: {
+        title: 'Metriche native Kubernetes',
+        description:
+          "L'agent raccoglie CPU/RAM di nodi e pod; ClickHouse e grafici per cluster, namespace o pod.",
+      },
+      uptime: {
+        title: 'Uptime HTTP, TCP e API',
+        description:
+          'Disponibilità e tempo di risposta per siti ed endpoint su più ambienti.',
+      },
+      alerts: {
+        title: 'Alert dove è già il team',
+        description:
+          'Email, Slack, Microsoft Teams, Telegram, webhook e push — senza prodotto di paging extra.',
+      },
+      finops: {
+        title: 'FinOps Azure integrato',
+        description:
+          'Costi e utilizzo Azure, breakdown e idee di right-sizing con supporto IA.',
+      },
+      mobile: {
+        title: 'Dashboard web + app mobile',
+        description:
+          'App native iOS e Android più UI web per stato, storico e alert.',
+      },
     },
   },
-  features: {
-    title: 'Funzionalità di Monitoraggio Enterprise',
-    subtitle: 'Capacità di monitoraggio complete progettate per infrastrutture moderne e ambienti Kubernetes',
+  capabilities: {
+    title: 'Cosa puoi monitorare',
+    subtitle: 'Capacità concrete — senza buzzword.',
     items: {
-      kubernetesMetrics: { title: 'Metriche CPU e RAM Kubernetes', description: 'Monitoraggio in tempo reale dell\'utilizzo di CPU e memoria su cluster, nodi, pod e namespace. Traccia il consumo di risorse con analisi dettagliate e dati storici.' },
-      uptime: { title: 'Monitoraggio Uptime', description: 'Monitoraggio continuo dell\'uptime per siti web, API e servizi. Ricevi alert istantanei quando viene rilevato un downtime con tracciamento del tempo di risposta e metriche di disponibilità.' },
-      alerting: { title: 'Alerting Intelligente', description: 'Sistema di alerting multi-canale con soglie configurabili. Ricevi notifiche via email, SMS, Slack, Discord e webhook quando vengono rilevati problemi.' },
-      notifications: { title: 'Notifiche in Tempo Reale', description: 'Notifiche push istantanee su app mobili e browser web. Non perdere mai un alert critico con aggiornamenti in tempo reale sullo stato della tua infrastruttura.' },
-      analytics: { title: 'Metriche e Analisi Avanzate', description: 'Dashboard metriche completo con grafici personalizzabili, analisi dei dati storici e tendenze delle prestazioni. Monitora tutto dalla salute del cluster alle prestazioni dell\'applicazione.' },
-      clusterMonitoring: { title: 'Monitoraggio Cluster Kubernetes', description: 'Visibilità completa nella tua infrastruttura Kubernetes. Monitora metriche a livello di cluster, stato dei nodi, stato dei pod, utilizzo delle risorse del namespace e prestazioni a livello di container.' },
-      multiEndpoint: { title: 'Monitoraggio Multi-endpoint', description: 'Monitora siti web, API REST, endpoint GraphQL e servizi TCP/UDP. Traccia tempi di risposta, codici di stato e disponibilità da più posizioni geografiche.' },
-      issueDetection: { title: 'Rilevamento Proattivo dei Problemi', description: 'Rilevamento avanzato di anomalie e alerting basato su soglie. Identifica il degrado delle prestazioni prima che diventi un problema critico con monitoraggio predittivo.' },
-      mobileAccess: { title: 'Accesso Mobile e Web', description: 'App native iOS e Android più dashboard web responsive. Monitora la tua infrastruttura da qualsiasi luogo con aggiornamenti in tempo reale e notifiche push.' },
+      http: {
+        title: 'Monitor HTTP / HTTPS',
+        description: 'Codici di stato, tempo di risposta e finestre di uptime (1h, 24h, 7d).',
+      },
+      tcp: {
+        title: 'Check TCP',
+        description: 'Verifica servizi non HTTP — porte e connettività.',
+      },
+      k8sHealth: {
+        title: 'Nodi e pod Kubernetes',
+        description: 'Salute del cluster e CPU/memoria a livello di nodo, pod e namespace.',
+      },
+      groups: {
+        title: 'Gruppi e ambienti',
+        description: 'Organizza i monitor per team, prodotto o Production / Staging / QA.',
+      },
+      channels: {
+        title: 'Canali di notifica',
+        description: 'Email, Slack, Teams, Telegram, webhook e push mobile.',
+      },
+      ssl: {
+        title: 'SSL e storico',
+        description: 'Scadenza certificati e grafici di performance storica.',
+      },
+      metrics: {
+        title: 'Pipeline metriche',
+        description: 'Agent → API → ClickHouse per query time-series veloci.',
+      },
+      auth: {
+        title: 'Auth per ops',
+        description: 'Username/password o Microsoft Account / Azure AD.',
+      },
+      helm: {
+        title: 'Deploy con Helm',
+        description: 'Chart ufficiali su Artifact Hub per installazioni Kubernetes.',
+      },
     },
   },
-  benefits: {
-    title: 'Perché Scegliere AlertHawk?',
-    subtitle: 'Soluzione di monitoraggio di livello enterprise progettata per team DevOps e ingegneri dell\'infrastruttura',
-    items: {
-      monitoring: { title: 'Monitoraggio Infrastruttura in Tempo Reale', description: 'Monitora cluster Kubernetes, applicazioni ed endpoint con latenza sub-secondo. Ottieni visibilità istantanea su metriche CPU, RAM e stato del sistema.' },
-      alerting: { title: 'Alerting Multi-Canale', description: 'Configura alert via email, SMS, Slack, Discord, webhook e notifiche push. Non perdere mai un problema critico con routing intelligente degli alert.' },
-      analytics: { title: 'Analisi e Metriche Avanzate', description: 'Analisi dei dati storici, rilevamento delle tendenze e insight sulle prestazioni. Traccia i pattern di utilizzo delle risorse e ottimizza la tua infrastruttura.' },
-      selfHosted: { title: 'Self-Hosted e Privato', description: 'Distribuisci sulla tua infrastruttura con controllo completo dei dati. Nessun vendor lock-in, privacy completa e conformità con i tuoi requisiti di sicurezza.' },
-      scalability: { title: 'Scalabilità Enterprise', description: 'Progettato per gestire migliaia di metriche ed endpoint. Architettura scalabile orizzontalmente che cresce con le esigenze della tua infrastruttura.' },
-      notifications: { title: 'Notifiche a Bassa Latenza', description: 'Notifiche push istantanee su mobile e web. Ricevi alert entro secondi dal rilevamento di un problema con aggiornamenti di stato in tempo reale.' },
+  proof: {
+    title: 'Guardalo nel prodotto',
+    subtitle: 'Dashboard reali di AlertHawk — metriche Kubernetes, FinOps e mobile.',
+    kubernetes: {
+      title: 'Metriche Kubernetes',
+      subtitle: 'CPU/RAM di cluster e applicazioni su nodi, pod e namespace.',
+      cluster: 'Metriche cluster',
+      application: 'Metriche applicazione',
+      overview: 'Panoramica cluster',
+    },
+    finops: {
+      title: 'FinOps Azure',
+      subtitle: 'Panoramica costi, trend, breakdown e raccomandazioni IA.',
+      overview: 'Panoramica portfolio',
+      historical: 'Spesa storica',
+      details: 'Dettaglio costi',
+      ai: 'Raccomandazioni IA',
+    },
+    mobile: {
+      title: 'Mobile',
+      subtitle: 'Stato, dettagli e alert su iOS e Android.',
     },
   },
   technology: {
-    title: 'Costruito con Tecnologia Moderna',
-    subtitle: 'Sfruttando tecnologie all\'avanguardia per un monitoraggio dell\'infrastruttura affidabile, scalabile e performante',
-    kubernetes: { title: 'Nativo Kubernetes', description: 'Costruito per Kubernetes con distribuzione Helm chart. Integrazione nativa con l\'API Kubernetes per monitoraggio seamless del cluster.' },
-    database: { title: 'Database Time-Series', description: 'Archiviazione e query efficienti dei dati delle metriche con architettura database time-series ottimizzata per analisi storiche.' },
-    processing: { title: 'Elaborazione in Tempo Reale', description: 'Motore di raccolta ed elaborazione metriche a bassa latenza per monitoraggio in tempo reale e attivazione istantanea degli alert.' },
-    security: { title: 'Sicuro e Scalabile', description: 'Sicurezza di livello enterprise con RBAC, comunicazioni crittografate e capacità di scalabilità orizzontale.' },
-    deployment: { title: 'Distribuzione Kubernetes', description: 'Distribuisci AlertHawk sul tuo cluster Kubernetes con il nostro Helm chart ufficiale. Supporta tutte le principali distribuzioni Kubernetes e provider cloud.' },
-    openSource: { title: 'Open Source', description: 'Costruito con trasparenza in mente. Visualizza il codice sorgente, contribuisci e personalizza AlertHawk per adattarlo alle tue esigenze specifiche di monitoraggio.' },
+    title: 'Deploy alle tue condizioni',
+    subtitle: 'Microservizi open source con Helm — o prova prima la demo ospitata.',
+    kubernetes: {
+      title: 'Nativo Kubernetes',
+      description: 'Deploy con Helm e agent che usano la API Kubernetes.',
+    },
+    database: {
+      title: 'Storage time-series',
+      description: 'Metriche su ClickHouse per analisi storica e query veloci.',
+    },
+    processing: {
+      title: 'Servizi modulari',
+      description: 'Auth, Monitoring, Notification, Metrics e FinOps come servizi separati.',
+    },
+    security: {
+      title: 'La tua rete, le tue regole',
+      description: 'Traffico e dati nel tuo ambiente; Azure AD quando serve.',
+    },
+    deployment: {
+      title: 'Installa con Helm',
+      description:
+        'Aggiungi il repo Helm AlertHawk, imposta i secret e installa sul cluster.',
+      viewHelmChart: 'Vedi Helm chart',
+    },
+    openSource: {
+      title: 'Open source su GitHub',
+      description: 'Leggi il codice, apri issue e contribuisci. Licenza MIT.',
+      viewGitHub: 'Vedi su GitHub',
+    },
   },
   pricing: {
-    title: 'Scegli il Tuo Piano',
-    subtitle: 'Self-hosted e completamente gratuito. Distribuisci sulla tua infrastruttura con controllo completo.',
+    title: 'Prezzi',
+    subtitle: 'Self-hosted è gratis. Monitor illimitati sull’infrastruttura che controlli.',
     openSource: {
-      badge: 'Open Source',
+      badge: 'Open source',
       price: '$0',
       period: '/per sempre',
-      description: 'Self-hosted e completamente gratuito. Distribuisci sulla tua infrastruttura con controllo completo.',
-      unlimited: { title: 'Monitoraggio Illimitato', description: 'Monitora endpoint, cluster e metriche illimitati' },
-      sourceCode: { title: 'Accesso Completo al Codice Sorgente', description: 'Visualizza, modifica e contribuisci al codice' },
-      selfHosted: { title: 'Distribuzione Self-Hosted', description: 'Controllo completo dei dati sulla tua infrastruttura' },
-      allFeatures: { title: 'Tutte le Funzionalità Incluse', description: 'Monitoraggio Kubernetes, alert, notifiche e altro' },
-      community: { title: 'Supporto della Comunità', description: 'Comunità attiva e discussioni su GitHub' },
-      viewGitHub: 'Visualizza su GitHub',
-      deployHelm: 'Distribuisci con Helm',
-    },
-    saas: {
-      badge: 'SaaS Gestito',
-      popular: 'POPOLARE',
-      price: 'Personalizzato',
-      description: 'Ospitato sulla nostra infrastruttura con supporto personalizzato. Contattaci per i prezzi.',
-      hosted: { title: 'Ospitato sulla Nostra Infrastruttura', description: 'Gestiamo l\'infrastruttura, tu ti concentri sul monitoraggio' },
-      support: { title: 'Supporto Personalizzato', description: 'Team di supporto dedicato con assistenza prioritaria' },
-      allFeatures: { title: 'Tutte le Funzionalità Incluse', description: 'Accesso completo a tutte le funzionalità di monitoraggio e alerting' },
-      maintenance: { title: 'Aggiornamenti e Manutenzione Gestiti', description: 'Gestiamo tutti gli aggiornamenti, backup e manutenzione' },
-      sla: { title: 'Garanzia SLA', description: 'Accordi di livello di servizio per uptime e supporto' },
-      customConfig: { title: 'Configurazione Personalizzata', description: 'Configurazione su misura per soddisfare i tuoi requisiti specifici' },
-      contactUs: 'Contattaci per i Prezzi',
+      description: 'Deploy fai da te. Nessun costo per check. Nessun limite di seat da noi.',
+      unlimited: {
+        title: 'Monitoring illimitato',
+        description: 'Endpoint, cluster e metriche limitati solo dal tuo hardware.',
+      },
+      sourceCode: {
+        title: 'Accesso completo al codice',
+        description: 'Licenza MIT — ispeziona, modifica e contribuisci.',
+      },
+      selfHosted: {
+        title: 'Deploy self-hosted',
+        description: 'Immagini Docker e chart Helm per il tuo ambiente.',
+      },
+      allFeatures: {
+        title: 'Tutte le funzioni',
+        description: 'Uptime, metriche Kubernetes, alert, FinOps e mobile.',
+      },
+      community: {
+        title: 'Supporto community',
+        description: 'Issue e discussion su GitHub.',
+      },
+      viewGitHub: 'Vedi su GitHub',
+      deployHelm: 'Deploy con Helm',
     },
   },
   contact: {
-    title: 'Contattaci',
-    subtitle: 'Hai domande, hai bisogno di supporto o vuoi contribuire? Ci piacerebbe sentirti.',
-    github: { title: 'GitHub', description: 'Visualizza il codice sorgente, segnala problemi o contribuisci al progetto.', visit: 'Visita GitHub' },
-    demo: { title: 'Demo Live', description: 'Prova AlertHawk in azione. Esplora la dashboard e vedi tutte le funzionalità.', view: 'Visualizza Demo' },
+    title: 'Prossimi passi',
+    subtitle: 'Prova la demo, fai deploy con Helm o apri il repository.',
+    github: {
+      title: 'GitHub',
+      description: 'Codice sorgente, issue e contributi.',
+      visit: 'Apri repository',
+    },
+    demo: {
+      title: 'Demo live',
+      description: 'Crea un account o accedi con un account Microsoft.',
+      view: 'Apri demo',
+    },
   },
-  footer: { description: 'Soluzioni di monitoraggio moderne per applicazioni moderne.', connect: 'Connetti', privacy: 'Informativa sulla privacy' },
-  howItWorks: {
-    title: 'Come Funziona',
-    subtitle: 'Vedi come AlertHawk monitora la tua infrastruttura e ti tiene informato',
-    monitoring: {
-      title: 'Monitoraggio Siti Web',
-      description: 'Monitora i tuoi siti web e API con intervalli configurabili e alert istantanei',
-      example: { title: 'Esempio di Monitoraggio', website: 'www.google.com', interval: 'Ogni 1 minuto (configurabile)', description: 'L\'applicazione monitora il sito web configurato ogni minuto. Secondo il codice di risposta ricevuto, il sistema può inviare alert a più canali.' },
-      channels: { title: 'Canali di Alert', teams: 'Teams', telegram: 'Telegram', slack: 'Slack', email: 'Email', webhook: 'Webhook', push: 'Notifica Push' },
-      flow: { monitoring: 'Monitoraggio', checking: 'Verifica Stato', success: 'Stato: OK', failed: 'Stato: Fallito', alert: 'Invio Alert' },
-    },
-    metrics: {
-      title: 'Monitoraggio Metriche Kubernetes',
-      description: 'Monitora i tuoi cluster Kubernetes con metriche CPU e RAM in tempo reale',
-      agent: { title: 'Agente Cluster', description: 'Un agente installato sul tuo cluster Kubernetes raccoglie metriche da nodi e pod nei namespace selezionati.' },
-      connection: { title: 'Connessione Cluster Facile', description: 'Connetti qualsiasi nuovo cluster per inviare dati al server AlertHawk con pochi clic.' },
-      storage: { title: 'Database ClickHouse Veloce', description: 'Le metriche sono memorizzate in un database ClickHouse veloce ottimizzato per dati time-series e query rapide.' },
-      visualization: { title: 'Grafici e Dashboard', description: 'Grafici e dashboard bellissimi forniscono insight in tempo reale sulle prestazioni del tuo cluster.' },
-    },
+  footer: {
+    description: 'Monitoring self-hosted per API, siti, server e Kubernetes.',
+    connect: 'Connetti',
+    privacy: 'Privacy Policy',
   },
 };

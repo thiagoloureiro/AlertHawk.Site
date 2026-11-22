@@ -66,7 +66,7 @@ export function LanguageSelector() {
               <span className="text-lg">{lang.flag}</span>
               <span className="text-sm font-medium">{lang.name}</span>
               {language === lang.code && (
-                <span className="ml-auto text-purple-500">✓</span>
+                <span className="ml-auto text-blue-400">✓</span>
               )}
             </button>
           ))}
