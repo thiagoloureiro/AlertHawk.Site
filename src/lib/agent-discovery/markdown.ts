@@ -2,35 +2,33 @@ import { siteUrl } from '@/lib/site';
 import { appUrl, docsUrl, githubUrl } from './config';
 
 export function homepageMarkdown(): string {
-  return `# AlertHawk — Self-hosted monitoring for APIs, websites, servers & Kubernetes
+  return `# AlertHawk — Kubernetes & Infrastructure Monitoring
 
-Open-source monitoring you run on your infrastructure: HTTP/TCP uptime, Kubernetes CPU/RAM metrics, multi-channel alerts, Azure FinOps, and mobile apps.
+Enterprise-grade monitoring for Kubernetes and infrastructure: real-time CPU and RAM metrics, uptime checks, intelligent multi-channel alerts, and Azure FinOps cost insights.
 
 ## Key capabilities
 
-- HTTP, TCP, and API uptime with response-time history
-- Kubernetes node and pod CPU/RAM metrics via a cluster agent
-- Alerts via email, Slack, Teams, Telegram, webhooks, and mobile push
-- Self-hosted Helm deploy — MIT license, no per-check fees
+- Kubernetes cluster, node, pod, and namespace metrics
+- Website and API uptime monitoring with instant notifications
+- Alerts via email, SMS, Slack, Discord, Teams, Telegram, and webhooks
+- Self-hosted, open source deployment with an official Helm chart
 - FinOps dashboards for Azure cost analysis and AI recommendations
 
 ## Links
 
-- [Live demo](${appUrl})
 - [Helm Chart](https://artifacthub.io/packages/helm/alerthawk/alerthawk)
 - [Documentation](${docsUrl})
 - [GitHub](${githubUrl})
+- [AlertHawk App](${appUrl})
 - [API Catalog](${siteUrl}/.well-known/api-catalog)
 - [Agent Skills](${siteUrl}/.well-known/agent-skills/index.json)
 
 ## Sections
 
-- [Advantages](#advantages) — why self-host AlertHawk
-- [Capabilities](#capabilities) — what you can monitor
-- [Product](#proof) — Kubernetes, FinOps, and mobile screenshots
-- [Deploy](#deploy) — Helm and open source
-- [Pricing](#pricing) — free self-hosted
-- [Contact](#contact) — demo and GitHub
+- [How it Works](#how-it-works) — deployment and alerting workflow
+- [Kubernetes Monitoring](#kubernetes-monitoring) — cluster and pod metrics
+- [Pricing](#pricing) — self-hosted and cloud options
+- [Contact](#contact) — get in touch
 `;
 }
 

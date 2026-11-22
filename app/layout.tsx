@@ -28,7 +28,8 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     title: defaultTitle,
-    description: defaultDescription,
+    description:
+      'Enterprise-grade Kubernetes monitoring with real-time CPU/RAM metrics, uptime monitoring, intelligent alerting, and instant notifications for DevOps teams.',
     siteName: 'AlertHawk',
     locale: 'en_US',
     images: [
@@ -36,14 +37,15 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'AlertHawk — self-hosted monitoring for APIs, websites, servers, and Kubernetes',
+        alt: 'AlertHawk dashboard — Kubernetes and infrastructure monitoring',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: defaultTitle,
-    description: defaultDescription,
+    description:
+      'Enterprise-grade Kubernetes monitoring with real-time CPU/RAM metrics, uptime monitoring, intelligent alerting, and instant notifications for DevOps teams.',
     images: ['/og-image.png'],
   },
   icons: {

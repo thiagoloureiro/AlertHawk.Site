@@ -1,25 +1,24 @@
 export const siteUrl = 'https://alerthawk.net';
 
 export const defaultTitle =
-  'AlertHawk — Self-hosted monitoring for APIs, websites, servers & Kubernetes';
+  'AlertHawk - Kubernetes Monitoring, Uptime Tracking & Infrastructure Alerts';
 
 export const defaultDescription =
-  'Open-source, self-hosted monitoring: HTTP/TCP uptime, Kubernetes CPU/RAM metrics, multi-channel alerts, Azure FinOps, and mobile apps. Deploy with Helm or try the live demo.';
+  'Enterprise-grade Kubernetes monitoring with real-time CPU/RAM metrics, uptime monitoring, intelligent alerting, and instant notifications. Built for DevOps teams monitoring modern infrastructure.';
 
 export const defaultKeywords = [
-  'self-hosted monitoring',
   'kubernetes monitoring',
   'kubernetes metrics',
+  'CPU monitoring',
+  'RAM monitoring',
   'uptime monitoring',
-  'API monitoring',
-  'TCP monitoring',
-  'infrastructure alerts',
-  'Azure FinOps',
-  'Helm monitoring',
-  'open source monitoring',
-  'DevOps monitoring',
-  'cluster metrics',
+  'infrastructure monitoring',
+  'alerting system',
+  'notifications',
+  'cluster monitoring',
   'pod metrics',
-  'Slack alerts',
-  'Teams alerts',
+  'namespace monitoring',
+  'DevOps monitoring',
+  'infrastructure alerts',
+  'real-time monitoring',
 ];

@@ -8,7 +8,7 @@ export const structuredDataGraph = {
       url: 'https://alerthawk.net/',
       name: 'AlertHawk',
       description:
-        'Self-hosted monitoring for APIs, websites, servers, and Kubernetes — with multi-channel alerts and Azure FinOps.',
+        'Enterprise-grade Kubernetes monitoring with uptime tracking, intelligent alerting, and FinOps for Azure.',
       publisher: { '@id': 'https://alerthawk.net/#organization' },
     },
     {
@@ -33,7 +33,7 @@ export const structuredDataGraph = {
       applicationCategory: 'DeveloperApplication',
       operatingSystem: 'Web, iOS, Android, Kubernetes',
       description:
-        'Open-source, self-hosted monitoring: HTTP/TCP uptime, Kubernetes CPU/RAM metrics, multi-channel alerts, Azure FinOps, and mobile apps.',
+        'Self-hosted Kubernetes and infrastructure monitoring with real-time CPU/RAM metrics, uptime checks, multi-channel alerts, and Azure FinOps cost insights.',
       url: 'https://alerthawk.net/',
       image: 'https://alerthawk.net/og-image.png',
       offers: {
@@ -53,7 +53,7 @@ export const structuredDataGraph = {
           name: 'What is AlertHawk?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'AlertHawk is an open-source, self-hosted monitoring platform for APIs, websites, servers, and Kubernetes. It covers uptime checks, cluster CPU/RAM metrics, multi-channel alerts, Azure FinOps, and mobile apps.',
+            text: 'AlertHawk is an enterprise-grade monitoring platform for Kubernetes and infrastructure. It provides real-time CPU and RAM metrics, uptime monitoring, intelligent alerting, and instant notifications for DevOps teams.',
           },
         },
         {
@@ -61,7 +61,7 @@ export const structuredDataGraph = {
           name: 'Is AlertHawk free?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. AlertHawk is MIT-licensed and free to self-host. Deploy with Docker images and the official Helm chart. A live demo is available at app.alerthawk.net.',
+            text: 'Yes. AlertHawk is open source and self-hosted at no license cost. You deploy it on your own Kubernetes cluster using the official Helm chart. A hosted option with personalized support is also available.',
           },
         },
         {
@@ -69,7 +69,7 @@ export const structuredDataGraph = {
           name: 'Does AlertHawk support Kubernetes monitoring?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. A metrics agent collects node and pod CPU/RAM, stores data in ClickHouse, and provides dashboards by cluster, namespace, and pod.',
+            text: 'Yes. AlertHawk offers cluster-level and pod-level CPU and memory metrics, multi-cluster visibility, and dashboards for nodes, pods, and namespaces.',
           },
         },
         {
@@ -77,7 +77,7 @@ export const structuredDataGraph = {
           name: 'What notification channels does AlertHawk support?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'AlertHawk supports email, Slack, Microsoft Teams, Telegram, webhooks, and mobile push notifications.',
+            text: 'AlertHawk supports email, SMS, Slack, Discord, Microsoft Teams, Telegram, webhooks, and mobile push notifications.',
           },
         },
         {

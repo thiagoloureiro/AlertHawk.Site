@@ -24,7 +24,7 @@ export function Footer() {
             <p className="mt-3">
               <a
                 href="/privacy"
-                className="text-sm text-gray-400 transition-colors hover:text-blue-400"
+                className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
               >
                 {t('footer.privacy')}
               </a>
@@ -38,7 +38,7 @@ export function Footer() {
                 href="https://docs.alerthawk.net/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block cursor-pointer rounded-full p-2 transition-colors hover:bg-gray-800 hover:text-blue-400"
+                className="inline-block p-2 rounded-full hover:bg-gray-800 hover:text-purple-400 transition-colors cursor-pointer"
                 onClick={(e) => e.stopPropagation()}
                 aria-label="Documentation"
               >
@@ -48,7 +48,7 @@ export function Footer() {
                 href="https://github.com/thiagoloureiro/AlertHawk"
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="inline-block cursor-pointer rounded-full p-2 transition-colors hover:bg-gray-800 hover:text-blue-400"
+                className="inline-block p-2 rounded-full hover:bg-gray-800 hover:text-purple-400 transition-colors cursor-pointer"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Github className="w-6 h-6" />
@@ -57,7 +57,7 @@ export function Footer() {
                 href="https://www.linkedin.com/in/thiago-loureiro-de-azevedo-dev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block cursor-pointer rounded-full p-2 transition-colors hover:bg-gray-800 hover:text-blue-400"
+                className="inline-block p-2 rounded-full hover:bg-gray-800 hover:text-purple-400 transition-colors cursor-pointer"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Linkedin className="w-6 h-6" />

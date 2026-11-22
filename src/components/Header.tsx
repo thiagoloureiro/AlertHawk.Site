@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import logoImage from '@/assets/logo.png';
@@ -20,9 +18,7 @@ export function Header() {
 
   const navLinks = [
     { id: 'home', label: t('nav.home') },
-    { id: 'advantages', label: t('nav.advantages') },
-    { id: 'capabilities', label: t('nav.capabilities') },
-    { id: 'deploy', label: t('nav.deploy') },
+    { id: 'how-it-works', label: t('nav.howItWorks') },
     { id: 'pricing', label: t('nav.pricing') },
     { id: 'contact', label: t('nav.contact') },
     { id: 'docs', label: t('nav.docs'), href: 'https://docs.alerthawk.net/', external: true },
@@ -50,8 +46,8 @@ export function Header() {
             </span>
           </a>
 
-          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center lg:flex">
-            <div className="flex items-center gap-0.5">
+          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center md:flex">
+            <div className="flex items-center gap-1">
               {navLinks.map((link) =>
                 'external' in link && link.external && link.href ? (
                   <a
@@ -59,7 +55,7 @@ export function Header() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cursor-pointer px-2.5 py-2 font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-gray-400 transition-colors hover:text-white xl:px-3 xl:text-[11px]"
+                    className="cursor-pointer px-3 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-gray-400 transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -71,7 +67,7 @@ export function Header() {
                       e.preventDefault();
                       scrollToSection(link.id);
                     }}
-                    className="cursor-pointer px-2.5 py-2 font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-gray-400 transition-colors hover:text-white xl:px-3 xl:text-[11px]"
+                    className="cursor-pointer px-3 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-gray-400 transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -84,7 +80,7 @@ export function Header() {
             <LanguageSelector />
 
             <button
-              className="text-gray-300 transition-colors hover:text-white lg:hidden"
+              className="text-gray-300 transition-colors hover:text-white md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -95,7 +91,7 @@ export function Header() {
       </nav>
 
       {mobileMenuOpen && (
-        <div className="border-t border-gray-800 bg-gray-900/95 backdrop-blur-lg lg:hidden">
+        <div className="border-t border-gray-800 bg-gray-900/95 backdrop-blur-lg md:hidden">
           <div className="container mx-auto flex flex-col space-y-1 px-4 py-4">
             {navLinks.map((link) =>
               'external' in link && link.external && link.href ? (
